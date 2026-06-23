@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anime Vanguards Wiki SEO 审计报告</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #5f6b7a;
+      --line: #dce3ec;
+      --high: #b42318;
+      --medium: #b54708;
+      --low: #175cd3;
+      --good: #067647;
+      --soft-high: #fff1f0;
+      --soft-medium: #fff7ed;
+      --soft-low: #eff6ff;
+      --soft-good: #ecfdf3;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      line-height: 1.65;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+    header {
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 22px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 34px;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin-top: 34px;
+      margin-bottom: 14px;
+      font-size: 23px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    code {
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: #f2f5f9;
+      padding: 1px 5px;
+      font-family: "Cascadia Mono", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 11px 12px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    th {
+      background: #eef3f8;
+      color: #27364a;
+      font-weight: 700;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+      padding: 4px 10px;
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .score-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .metric, .finding, .note {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1.1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .findings {
+      display: grid;
+      gap: 14px;
+    }
+
+    .finding {
+      border-left: 5px solid var(--line);
+    }
+
+    .finding.high {
+      border-left-color: var(--high);
+      background: linear-gradient(90deg, var(--soft-high), var(--panel) 24%);
+    }
+
+    .finding.medium {
+      border-left-color: var(--medium);
+      background: linear-gradient(90deg, var(--soft-medium), var(--panel) 24%);
+    }
+
+    .finding.low {
+      border-left-color: var(--low);
+      background: linear-gradient(90deg, var(--soft-low), var(--panel) 24%);
+    }
+
+    .finding.good {
+      border-left-color: var(--good);
+      background: linear-gradient(90deg, var(--soft-good), var(--panel) 24%);
+    }
+
+    .tag {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    .tag.high { color: var(--high); background: var(--soft-high); }
+    .tag.medium { color: var(--medium); background: var(--soft-medium); }
+    .tag.low { color: var(--low); background: var(--soft-low); }
+    .tag.good { color: var(--good); background: var(--soft-good); }
+
+    .evidence {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .action-list {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+
+    .action-list li {
+      margin: 4px 0;
+    }
+
+    .summary-list {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+
+    @media (max-width: 760px) {
+      main { padding: 28px 16px 48px; }
+      h1 { font-size: 28px; }
+      .score-grid { grid-template-columns: 1fr; }
+      th, td { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Anime Vanguards Wiki SEO 审计报告</h1>
+    <div class="meta">
+      <span class="pill">目标：http://localhost:3000/</span>
+      <span class="pill">审计日期：2026-06-23</span>
+      <span class="pill">站点类型：多语言 Roblox 游戏 Wiki / 攻略内容站</span>
+      <span class="pill">审计语言：中文</span>
+    </div>
+  </header>
+
+  <section class="note">
+    <h2>执行摘要</h2>
+    <p>整体来看，站点已经具备较好的 SEO 基础：robots 和 sitemap 可访问，sitemap 输出了 hreflang alternate，主要内容页有 canonical、Article/BreadcrumbList JSON-LD、清晰 H1 和充足正文。最需要优先处理的是多语言根路径的稳定性、静态法务页的语言/metadata 问题、移动端横向溢出，以及英文文章标题过长。</p>
+    <ul class="summary-list">
+      <li><strong>最高优先级：</strong>关闭或重构根路径自动语言检测，避免 <code>/</code> 因 <code>Accept-Language</code> 或 <code>NEXT_LOCALE</code> 变化而跳转/改 canonical。</li>
+      <li><strong>第二优先级：</strong>修复 <code>/ja/about</code>、<code>/es/privacy-policy</code> 等静态页正文仍为英文、且缺少页面级 canonical/hreflang 的问题。</li>
+      <li><strong>快速收益：</strong>收短文章 SEO title，修复首页移动端横向溢出，减少首页一次性渲染的文章卡片数量。</li>
+    </ul>
+  </section>
+
+  <section class="score-grid">
+    <div class="metric">
+      <strong>74/100</strong>
+      <span>综合 SEO 健康度估算</span>
+    </div>
+    <div class="metric">
+      <strong>212</strong>
+      <span>sitemap URL 数</span>
+    </div>
+    <div class="metric">
+      <strong>1060</strong>
+      <span>sitemap hreflang alternate 数</span>
+    </div>
+    <div class="metric">
+      <strong>40/40</strong>
+      <span>英文内容标题超过常见 SERP 显示长度</span>
+    </div>
+  </section>
+
+  <h2>审计范围与限制</h2>
+  <table>
+    <tr>
+      <th>项目</th>
+      <th>说明</th>
+    </tr>
+    <tr>
+      <td>已检查</td>
+      <td>源码中的 Next.js metadata、middleware、robots、sitemap、i18n 路由、内容目录；浏览器渲染后的 DOM；移动端 390px 视口；代表性 URL 状态码；sitemap XML 实际输出。</td>
+    </tr>
+    <tr>
+      <td>未接入</td>
+      <td>Google Search Console、真实线上日志、生产环境 Core Web Vitals、PageSpeed Insights、外链数据与关键词排名数据。</td>
+    </tr>
+    <tr>
+      <td>性能数据解释</td>
+      <td>响应时间来自 localhost dev server 粗测，只用于发现体积和渲染趋势，不等同于线上 Lighthouse 或 CrUX 数据。</td>
+    </tr>
+  </table>
+
+  <h2>关键数据</h2>
+  <table>
+    <tr>
+      <th>检查项</th>
+      <th>结果</th>
+      <th>备注</th>
+    </tr>
+    <tr>
+      <td>robots.txt</td>
+      <td>200，可抓取，指向 sitemap</td>
+      <td><code>User-Agent: *</code>、<code>Allow: /</code>、<code>Sitemap: https://anime-vanguards-wiki.wiki/sitemap.xml</code></td>
+    </tr>
+    <tr>
+      <td>sitemap.xml</td>
+      <td>200，212 个 <code>&lt;loc&gt;</code>，1060 个 <code>xhtml:link</code></td>
+      <td>实际 XML 含 <code>xmlns:xhtml</code>，每个 URL 输出 x-default/en/pt-br/es/ja。</td>
+    </tr>
+    <tr>
+      <td>内容覆盖</td>
+      <td>四种语言各 40 篇 MDX</td>
+      <td>en、es、ja、pt-br 内容数量一致；各栏目数量也一致。</td>
+    </tr>
+    <tr>
+      <td>Schema</td>
+      <td>主要模板可见</td>
+      <td>首页渲染 Organization + WebSite；文章页渲染 Organization + Article + BreadcrumbList。</td>
+    </tr>
+    <tr>
+      <td>代表性状态码</td>
+      <td>正常</td>
+      <td><code>/codes/anime-vanguards-codes</code>、<code>/es/codes/anime-vanguards-codes</code>、<code>/pt-br/guide/anime-vanguards-beginner-guide</code>、<code>/ja/units/anime-vanguards-zoro</code> 均为 200；不存在页面样本为 404。</td>
+    </tr>
+    <tr>
+      <td>样本页面体积</td>
+      <td>偏大</td>
+      <td>首页 HTML 下载约 437 KB；英文 beginner guide 约 402 KB。</td>
+    </tr>
+  </table>
+
+  <h2>优先级问题</h2>
+  <div class="findings">
+    <article class="finding high">
+      <h3><span class="tag high">高</span>根路径会按语言请求头或 cookie 改变目标语言和 canonical</h3>
+      <p><strong>影响：</strong><code>/</code> 同时被 sitemap 标为 x-default 和 en，但请求 <code>Accept-Language: ja</code> 会 307 到 <code>/ja</code>，请求 <code>Accept-Language: es</code> 会 307 到 <code>/es</code>，带 <code>Cookie: NEXT_LOCALE=ja</code> 也会 307 到 <code>/ja</code>。这会让搜索引擎看到不稳定的根 URL，削弱 x-default/default locale 信号，增加重复与错语种索引风险。</p>
+      <p class="evidence">证据：<code>src/i18n/routing.ts:15-16</code> 使用 <code>localePrefix: "as-needed"</code> 且 <code>localeDetection: true</code>；<code>src/app/sitemap.ts:17</code> 将 x-default 指向默认语言根 URL。</p>
+      <ul class="action-list">
+        <li>建议将 <code>localeDetection</code> 改为 <code>false</code>，让 <code>/</code> 永远稳定服务英文默认页，语言切换只通过显式链接和 cookie 用于 UI。</li>
+        <li>如果需要 x-default 语言选择页，则让 <code>/</code> 成为中立选择页，并把英文改为显式 <code>/en</code>，避免 <code>/</code> 同时承担英文页和语言检测入口。</li>
+        <li>部署后用无 cookie、不同 <code>Accept-Language</code>、Googlebot UA 分别验证 <code>/</code> 的 status、canonical、hreflang 是否一致。</li>
+      </ul>
+    </article>
+
+    <article class="finding high">
+      <h3><span class="tag high">高</span>多语言静态法务/关于页面内容未本地化，且缺少页面级 metadata</h3>
+      <p><strong>影响：</strong><code>/ja/privacy-policy</code> 的 HTML <code>lang="ja"</code>，但 H1 是英文 “Privacy Policy”，正文也是英文；<code>/es/about</code> 同样是西班牙语页面框架加英文正文。这些 URL 被 sitemap 收录，会造成语言不匹配、低价值本地化页和错误摘要。</p>
+      <p class="evidence">证据：<code>src/app/[locale]/privacy-policy/page.tsx:5-8</code>、<code>src/app/[locale]/about/page.tsx:5-7</code>、<code>src/app/[locale]/terms-of-service/page.tsx:5-8</code> 均硬编码英文内容；<code>src/app/sitemap.ts:26</code> 把 <code>/privacy-policy</code>、<code>/terms-of-service</code>、<code>/copyright</code>、<code>/about</code> 放入所有语言 sitemap；<code>src/app/[locale]/layout.tsx:26-39</code> 提供的是站点级默认 metadata，静态页未覆盖 canonical/hreflang。</p>
+      <ul class="action-list">
+        <li>为这些页面接入 locale messages，至少本地化 H1、正文、title、description。</li>
+        <li>为每个静态页添加 <code>generateMetadata</code>，输出 page-specific title、description、canonical、languages。</li>
+        <li>如果暂不翻译法务页，先从非英文 sitemap 移除这些 URL，或对未翻译 locale 加 <code>noindex</code>，避免索引错语种页面。</li>
+      </ul>
+    </article>
+
+    <article class="finding medium">
+      <h3><span class="tag medium">中</span>首页移动端横向溢出</h3>
+      <p><strong>影响：</strong>390px 移动视口下，英文首页 <code>overflowX=true</code>。定位到自动滚动文章卡片的动画轨道，部分卡片被计算到页面可滚动宽度里，导致横向滚动。移动可用性问题会影响体验，也可能影响移动端 SEO 质量信号。</p>
+      <p class="evidence">证据：<code>src/app/[locale]/HomePageClient.tsx:103-112</code> 使用 <code>overflow-hidden</code> 容器 + <code>animate-auto-scroll</code> 轨道 + 双倍文章卡片；<code>src/app/globals.css:82-88</code> 通过 <code>translateX(-50%)</code> 动画移动轨道。浏览器检测到首页卡片 right 坐标超过 25000px。</p>
+      <ul class="action-list">
+        <li>为 carousel 外层增加可靠的横向裁切和布局隔离，例如 <code>overflow-x: clip</code>、<code>max-width: 100%</code>、<code>contain: paint</code>；同时复测 <code>document.documentElement.scrollWidth</code>。</li>
+        <li>减少实际 DOM 中的重复卡片数量，或改用 CSS/JS 虚拟滚动，不要把全部内容复制两遍。</li>
+        <li>在 390px、768px、1280px 三个视口加入回归检查：<code>scrollWidth &lt;= clientWidth + 1</code>。</li>
+      </ul>
+    </article>
+
+    <article class="finding medium">
+      <h3><span class="tag medium">中</span>英文文章 SEO title 普遍过长</h3>
+      <p><strong>影响：</strong>所有 40 个英文内容页在拼接站名后标题都超过 60 字符，其中 37 个超过 90 字符。搜索结果中标题大概率被截断，弱化关键词和点击吸引力。样本 <code>/guide/anime-vanguards-beginner-guide</code> title 长度为 96。</p>
+      <p class="evidence">证据：<code>src/app/[locale]/[...slug]/page.tsx:75</code> 使用 <code>${item.metadata.title} - ${localizedSiteName}</code>；英文内容元数据标题本身多为长句。</p>
+      <ul class="action-list">
+        <li>在 MDX metadata 中新增 <code>seoTitle</code> 字段，H1 保持长标题，title tag 使用更短版本。</li>
+        <li>避免在已经包含 “Anime Vanguards” 的文章标题后重复追加完整站名；可按页面类型选择性追加品牌。</li>
+        <li>优先优化高价值页面：codes、tier list、beginner guide、unit guide、calculator。</li>
+      </ul>
+    </article>
+
+    <article class="finding medium">
+      <h3><span class="tag medium">中</span>首页 HTML 与可见文本量偏大，主意图被稀释</h3>
+      <p><strong>影响：</strong>首页渲染约 9071 词，HTML 下载约 437 KB，本地 dev TTFB 粗测约 0.85s。首页同时展示大量文章卡片、模块说明、FAQ、侧边栏和 carousel，容易让核心主题“Anime Vanguards Wiki / codes / units / guide”被大量长尾内容稀释，也增加移动端渲染成本。</p>
+      <p class="evidence">证据：<code>src/app/[locale]/page.tsx</code> 收集全部 <code>CONTENT_TYPES</code> 的文章传给首页；<code>src/app/[locale]/HomePageClient.tsx:107-121</code> 又把 <code>articles</code> 复制两遍渲染。</p>
+      <ul class="action-list">
+        <li>首页 carousel 改为 curated 8-12 个热门页面，不要渲染所有 40 篇内容并复制一份。</li>
+        <li>把长模块说明压缩为更短的入口卡片，把深度内容留给栏目页。</li>
+        <li>补充生产环境 Lighthouse / PageSpeed 后再判断是否需要拆分客户端组件或延迟加载视频区块。</li>
+      </ul>
+    </article>
+
+    <article class="finding medium">
+      <h3><span class="tag medium">中</span>sitemap 的 lastmod 每次使用当前时间</h3>
+      <p><strong>影响：</strong>sitemap 中每个 URL 的 <code>lastmod</code> 都来自 <code>new Date()</code>，会让所有 212 个 URL 在每次生成时看起来都刚更新。长期看会降低 lastmod 信号可信度，也可能浪费抓取预算。</p>
+      <p class="evidence">证据：<code>src/app/sitemap.ts:38</code> 使用 <code>lastModified: new Date()</code>。</p>
+      <ul class="action-list">
+        <li>动态文章 URL 使用 MDX <code>lastModified</code> 或 <code>date</code>。</li>
+        <li>静态页面使用固定更新时间，或只有内容真正变更时更新。</li>
+        <li>确保 sitemap 输出的是 UTC ISO 时间，且不会因每次请求而变化。</li>
+      </ul>
+    </article>
+
+    <article class="finding low">
+      <h3><span class="tag low">低</span>栏目页 heading 层级跳过 H2</h3>
+      <p><strong>影响：</strong><code>/codes</code> 样本 heading levels 为 <code>1,3,3,3,3,4,4</code>，页面从 H1 直接进入卡片 H3。它不是严重排名问题，但会影响文档结构、辅助技术理解和内容语义。</p>
+      <p class="evidence">证据：<code>src/app/[locale]/[...slug]/page.tsx:103</code> 的栏目页卡片标题使用 <code>h3</code>，但前面没有 H2 容器标题。</p>
+      <ul class="action-list">
+        <li>把栏目页卡片标题改为 <code>h2</code>，或在列表前加一个 <code>h2</code>，再用 <code>h3</code> 作为卡片标题。</li>
+      </ul>
+    </article>
+
+    <article class="finding low">
+      <h3><span class="tag low">低</span>head 中未输出 favicon/manifest 链接</h3>
+      <p><strong>影响：</strong>资源文件存在于 <code>public/</code>，但渲染后的 head 没有 <code>rel="icon"</code>、<code>rel="apple-touch-icon"</code> 或 <code>rel="manifest"</code>。这通常不是核心排名因素，但影响浏览器标签、收藏、PWA 和品牌展示。</p>
+      <p class="evidence">证据：浏览器 head 检查仅发现 canonical/alternate，没有 icon/manifest；<code>src/app/[locale]/layout.tsx:33-39</code> metadata 未声明 <code>icons</code> 或 <code>manifest</code>。</p>
+      <ul class="action-list">
+        <li>在 layout metadata 中添加 <code>manifest: "/manifest.json"</code> 和 icons 配置。</li>
+        <li>确保 apple touch icon、maskable icon、favicon 尺寸与 <code>public/manifest.json</code> 一致。</li>
+      </ul>
+    </article>
+  </div>
+
+  <h2>做得好的地方</h2>
+  <div class="findings">
+    <article class="finding good">
+      <h3><span class="tag good">良好</span>核心可抓取与索引基础完整</h3>
+      <p><code>robots.txt</code> 允许抓取并指向 sitemap；代表性内容 URL 返回 200；不存在页面样本返回 404。内容目录按 en/es/ja/pt-br 对齐，便于维护 hreflang 对应关系。</p>
+    </article>
+    <article class="finding good">
+      <h3><span class="tag good">良好</span>主要内容页具备 canonical、hreflang 和结构化数据</h3>
+      <p>首页有 WebSite/Organization JSON-LD，文章页有 Article/BreadcrumbList；渲染后的 DOM 可以直接检测到 JSON-LD，不是只存在于静态源码推断。</p>
+    </article>
+    <article class="finding good">
+      <h3><span class="tag good">良好</span>文章正文深度充足，内部链接密度高</h3>
+      <p>英文 beginner guide 样本约 8691 词，内部链接约 53 个；日文样本约 3196 词，内部链接约 45 个。内容深度足够，后续重点应转向质量、准确性、标题点击率和页面体验。</p>
+    </article>
+  </div>
+
+  <h2>优先行动计划</h2>
+  <table>
+    <tr>
+      <th>优先级</th>
+      <th>任务</th>
+      <th>预期收益</th>
+    </tr>
+    <tr>
+      <td>P0</td>
+      <td>决定国际化 URL 策略：稳定 <code>/</code> 为英文，或改为独立 x-default 语言入口；关闭自动语言检测或避免根路径按请求头跳转。</td>
+      <td>降低错语种索引与 canonical/hreflang 冲突风险。</td>
+    </tr>
+    <tr>
+      <td>P0</td>
+      <td>处理多语言静态法务页：翻译并添加 metadata，或暂时从非英文 sitemap 移除/noindex。</td>
+      <td>修复 lang 与正文不匹配，减少低质量 locale 页面。</td>
+    </tr>
+    <tr>
+      <td>P1</td>
+      <td>修复首页移动端横向溢出，并加入 viewport 回归检查。</td>
+      <td>改善移动体验和页面质量信号。</td>
+    </tr>
+    <tr>
+      <td>P1</td>
+      <td>为内容页新增短 <code>seoTitle</code>，优先优化高流量关键词页面。</td>
+      <td>提升 SERP 可读性与点击率。</td>
+    </tr>
+    <tr>
+      <td>P1</td>
+      <td>减少首页渲染内容量，carousel 改为精选页。</td>
+      <td>降低 HTML 体积、提升渲染速度、强化首页主题。</td>
+    </tr>
+    <tr>
+      <td>P2</td>
+      <td>sitemap lastmod 改用真实内容日期。</td>
+      <td>提升 sitemap 信号可信度，避免无意义更新时间。</td>
+    </tr>
+    <tr>
+      <td>P2</td>
+      <td>修复栏目页 heading 层级，补充 favicon/manifest metadata。</td>
+      <td>改善语义结构、品牌展示和 PWA 兼容。</td>
+    </tr>
+  </table>
+
+  <h2>建议复测清单</h2>
+  <ul class="summary-list">
+    <li><code>curl -I -H "Accept-Language: ja" https://anime-vanguards-wiki.wiki/</code> 不应再把默认根路径变成非默认 canonical，除非明确采用独立 x-default 策略。</li>
+    <li>浏览器检查 <code>/</code>、<code>/ja/</code>、<code>/es/</code>：canonical、hreflang、HTML lang、正文语言一致。</li>
+    <li>390px 移动视口下检查 <code>document.documentElement.scrollWidth &lt;= document.documentElement.clientWidth + 1</code>。</li>
+    <li>抽样 10 个文章页：title 长度控制在更适合展示的范围，且不重复堆叠 “Anime Vanguards”。</li>
+    <li>重新抓取 sitemap：lastmod 不应每次请求全部变成当前时间。</li>
+  </ul>
+</main>
+</body>
+</html>
