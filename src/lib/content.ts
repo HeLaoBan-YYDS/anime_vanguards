@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { CONTENT_TYPES as CONFIG_CONTENT_TYPES } from "@/config/navigation";
+import { toHeadingId } from "@/lib/heading-slug";
 import { routing, type Locale } from "@/i18n/routing";
 
 // 从统一配置导入内容类型
@@ -94,12 +95,7 @@ function extractHeadings(mdxSource: string): Heading[] {
     if (match) {
       const level = match[1].length;
       const text = match[2].replace(/\{[^}]*\}/g, "").trim();
-      const id = text
-        .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, "")
-        .replace(/\s+/g, "-")
-        .replace(/-+/g, "-")
-        .replace(/^-|-$/g, "");
+      const id = toHeadingId(text);
       headings.push({ id, text, level });
     }
   }
