@@ -123,8 +123,8 @@ export async function SiteFooter({ locale }: { locale: string }) {
             <h3 className="font-bold text-foreground">{t("aboutTitle")}</h3>
             <p className="mt-3 max-w-xl text-sm leading-7 text-muted-foreground">{t("about")}</p>
           </div>
-          <FooterList title={t("quickLinks")} links={[[t("playGame"), ROBLOX_GAME_URL], [t("officialDiscord"), DISCORD_URL], [t("officialYoutube"), YOUTUBE_CHANNEL_URL], [t("vvBuilder"), OFFICIAL_SITE_URL], [t("robloxGroup"), ROBLOX_GROUP_URL]]} />
-          <FooterList title={t("guides")} links={[[t("beginnerGuide"), "/guide"], [t("codesGuide"), "/codes"], [t("tierLists"), "/tiers"], [t("unitsGuide"), "/units"], [t("valuesGuide"), "/values"], [t("privacyPolicy"), "/privacy-policy"], [t("termsOfService"), "/terms-of-service"]]} />
+          <FooterList locale={locale} title={t("quickLinks")} links={[[t("playGame"), ROBLOX_GAME_URL], [t("officialDiscord"), DISCORD_URL], [t("officialYoutube"), YOUTUBE_CHANNEL_URL], [t("officialWebsite"), OFFICIAL_SITE_URL], [t("robloxGroup"), ROBLOX_GROUP_URL]]} />
+          <FooterList locale={locale} title={t("guides")} links={[[t("beginnerGuide"), "/guide"], [t("codesGuide"), "/codes"], [t("tierLists"), "/tiers"], [t("unitsGuide"), "/units"], [t("valuesGuide"), "/values"], [t("privacyPolicy"), "/privacy-policy"], [t("termsOfService"), "/terms-of-service"]]} />
         </div>
         <p className="mt-10 border-t border-border pt-6 text-xs text-muted-foreground">{t("copyright")}</p>
       </div>
@@ -132,7 +132,12 @@ export async function SiteFooter({ locale }: { locale: string }) {
   );
 }
 
-function FooterList({ title, links }: { title: string; links: string[][] }) { return <div><h4 className="font-semibold text-foreground">{title}</h4><ul className="mt-3 space-y-2 text-sm text-muted-foreground">{links.map(([label, href]) => <li key={href}><Link className="hover:text-foreground" href={href}>{label}</Link></li>)}</ul></div>; }
+function FooterList({ title, links, locale }: { title: string; links: string[][]; locale: string }) {
+  return <div><h4 className="font-semibold text-foreground">{title}</h4><ul className="mt-3 space-y-2 text-sm text-muted-foreground">{links.map(([label, href]) => {
+    const localizedHref = href.startsWith("/") ? localizeHref(href, locale) : href;
+    return <li key={href}><Link className="hover:text-foreground" href={localizedHref}>{label}</Link></li>;
+  })}</ul></div>;
+}
 
 export function TrailerCard({ videoId }: { videoId: string }) {
   return (

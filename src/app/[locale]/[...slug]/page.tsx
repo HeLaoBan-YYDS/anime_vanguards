@@ -12,17 +12,24 @@ import { routing, type Locale } from "@/i18n/routing";
 import en from "@/locales/en.json";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://anime-vanguards-wiki.wiki";
-const siteName = "Anime Vanguards Wiki";
 const defaultImage = "/images/hero.webp";
 
 type Messages = typeof en;
 
+function localizedPath(locale: Locale | string, pathname: string) {
+  return locale === routing.defaultLocale ? pathname : `/${locale}${pathname === "/" ? "" : pathname}`;
+}
+
 function languageAlternates(pathname: string) {
-  return Object.fromEntries(routing.locales.map((locale) => [locale, locale === "en" ? pathname : `/${locale}${pathname}`]));
+  return {
+    "x-default": localizedPath(routing.defaultLocale, pathname),
+    ...Object.fromEntries(routing.locales.map((locale) => [locale, localizedPath(locale, pathname)])),
+  };
 }
 
 function localizedUrl(locale: Locale, pathname: string) {
-  return `${siteUrl}${locale === "en" ? "" : `/${locale}`}${pathname}`;
+  const path = localizedPath(locale, pathname);
+  return `${siteUrl}${path === "/" ? "" : path}`;
 }
 
 function imageUrl(image?: string) {
@@ -41,17 +48,19 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale; slug: string[] }> }): Promise<Metadata> {
   const { locale, slug } = await params;
+  const messages = (await getMessages({ locale })) as Messages;
+  const localizedSiteName = messages.site.name;
   if (slug.length === 1 && CONTENT_TYPES.includes(slug[0])) {
     const ct = slug[0];
-    const ctTitle = contentTypeTitle(ct);
-    const title = `${ctTitle} - ${siteName}`;
-    const description = `Browse all ${ctTitle.toLowerCase()} guides and resources for Anime Vanguards.`;
+    const sectionMessages = (messages as unknown as Record<string, Record<string, string>>)[ct];
+    const title = `${sectionMessages?.overviewTitle || contentTypeTitle(ct)} - ${localizedSiteName}`;
+    const description = sectionMessages?.overviewDescription || `Browse all ${contentTypeTitle(ct).toLowerCase()} guides and resources for Anime Vanguards.`;
     const image = imageUrl();
     return {
       title,
       description,
-      alternates: { canonical: `/${ct}`, languages: languageAlternates(`/${ct}`) },
-      openGraph: { title, description, url: localizedUrl(locale, `/${ct}`), siteName, images: [image] },
+      alternates: { canonical: localizedPath(locale, `/${ct}`), languages: languageAlternates(`/${ct}`) },
+      openGraph: { title, description, url: localizedUrl(locale, `/${ct}`), siteName: localizedSiteName, images: [image] },
       twitter: { card: "summary_large_image", title, description, images: [image] },
     };
   }
@@ -63,10 +72,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
   const pathname = `/${contentType}/${articleSlug.join("/")}`;
   const image = imageUrl(item.metadata.image);
   return {
-    title: `${item.metadata.title} - ${siteName}`,
+    title: `${item.metadata.title} - ${localizedSiteName}`,
     description: item.metadata.description,
-    alternates: { canonical: pathname, languages: languageAlternates(pathname) },
-    openGraph: { type: "article", title: item.metadata.title, description: item.metadata.description, url: localizedUrl(locale, pathname), siteName, images: [image] },
+    alternates: { canonical: localizedPath(locale, pathname), languages: languageAlternates(pathname) },
+    openGraph: { type: "article", title: item.metadata.title, description: item.metadata.description, url: localizedUrl(locale, pathname), siteName: localizedSiteName, images: [image] },
     twitter: { card: "summary_large_image", title: item.metadata.title, description: item.metadata.description, images: [image] },
   };
 }
@@ -87,7 +96,7 @@ async function NavigationPage({ locale, contentType, navGroups }: { locale: Loca
   const listData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: `${contentTypeTitle(contentType)} - ${siteName}`,
+    name: `${sectionTitle} - ${messages.site.name}`,
     itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, url: localizedUrl(locale, `/${contentType}/${item.slug}`), name: item.metadata.title })),
   };
 
@@ -97,12 +106,13 @@ async function NavigationPage({ locale, contentType, navGroups }: { locale: Loca
 async function DetailPage({ locale, contentType, slug, navGroups }: { locale: Locale; contentType: string; slug: string[]; navGroups: NavGroup[] }) {
   if (!CONTENT_TYPES.includes(contentType)) notFound();
   const messages = (await getMessages({ locale })) as Messages;
+  const localizedSiteName = messages.site.name;
   const item = await getContent(contentType, slug, locale);
   if (!item) notFound();
 
   const pathname = `/${contentType}/${slug.join("/")}`;
   const tocLabel = messages.shared.tableOfContents || messages.shared.inThisSection || "Table of Contents";
-  const sectionLabel = contentTypeTitle(contentType);
+  const sectionLabel = (messages.nav as Record<string, string>)[contentType] || contentTypeTitle(contentType);
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -112,14 +122,14 @@ async function DetailPage({ locale, contentType, slug, navGroups }: { locale: Lo
     datePublished: item.metadata.date,
     dateModified: item.metadata.lastModified ?? item.metadata.date,
     mainEntityOfPage: localizedUrl(locale, pathname),
-    author: { "@type": "Organization", name: siteName },
-    publisher: { "@type": "Organization", name: siteName, logo: { "@type": "ImageObject", url: `${siteUrl}/android-chrome-512x512.png` } },
+    author: { "@type": "Organization", name: localizedSiteName },
+    publisher: { "@type": "Organization", name: localizedSiteName, logo: { "@type": "ImageObject", url: `${siteUrl}/android-chrome-512x512.png` } },
   };
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: localizedUrl(locale, "/") },
+      { "@type": "ListItem", position: 1, name: messages.shared.home, item: localizedUrl(locale, "/") },
       { "@type": "ListItem", position: 2, name: sectionLabel, item: localizedUrl(locale, `/${contentType}`) },
       { "@type": "ListItem", position: 3, name: item.metadata.title, item: localizedUrl(locale, pathname) },
     ],

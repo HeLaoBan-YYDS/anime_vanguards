@@ -1,1 +1,494 @@
-{}
+{
+  "site": {
+    "name": "Wiki de Anime Vanguards",
+    "shortName": "Anime Vanguards",
+    "tagline": "Wiki comunitaria hecha por fans",
+    "description": "La Wiki de Anime Vanguards ayuda a jugadores de Roblox a seguir códigos, unidades, traits, evoluciones, rutas de farmeo, notas de actualización y progreso inicial del anime tower defense de Kitawari.",
+    "legalNotice": "Wiki independiente hecha por fans. No afiliada a Kitawari, Roblox ni a los canales oficiales de Anime Vanguards."
+  },
+  "nav": {
+    "codes": "Códigos",
+    "tiers": "Tiers",
+    "values": "Valores",
+    "units": "Unidades",
+    "items": "Objetos",
+    "modes": "Modos",
+    "guide": "Guía",
+    "community": "Comunidad"
+  },
+  "home": {
+    "meta": {
+      "title": "Wiki de Anime Vanguards - Códigos, unidades y guía",
+      "description": "Guías de Anime Vanguards en Roblox: progreso para principiantes, unidades, traits, evoluciones, rutas de farmeo, banners, notas de actualización y códigos."
+    },
+    "hero": {
+      "eyebrow": "Wiki comunitaria hecha por fans",
+      "title": "Wiki de Anime Vanguards",
+      "description": "Domina Anime Vanguards en Roblox con rutas prácticas para summons, unidades, traits, evoluciones, farmeo, actualizaciones y códigos activos en un hub rápido hecho por fans.",
+      "stats": [
+        "Lanzado el 8 sep. 2024",
+        "Actualizado el 22 jun. 2026",
+        "1,94 mil M+ visitas",
+        "1,95 M+ favoritos",
+        "Pico de 340 mil CCU"
+      ],
+      "primaryCta": "Jugar en Roblox",
+      "secondaryCta": "Unirse al Discord oficial",
+      "tertiaryCta": "Ver el YouTube oficial",
+      "videoLabel": "Medios oficiales"
+    },
+    "updates": {
+      "title": "Últimas actualizaciones",
+      "browse": "Ver todas las guías",
+      "viewAll": "Ver todo"
+    },
+    "start": {
+      "eyebrow": "Empieza aquí",
+      "title": "Tu recorrido en Anime Vanguards",
+      "cards": [
+        {
+          "number": "1",
+          "title": "Guía para principiantes",
+          "description": "Aprende el ciclo principal, dónde gastar tus primeros recursos y cómo evitar errores tempranos de progreso."
+        },
+        {
+          "number": "2",
+          "title": "Farmea Gems, Gold y rerolls",
+          "description": "Las rutas más rápidas para moneda inicial, tiradas de banner y eficiencia de reroll durante tus primeras horas."
+        },
+        {
+          "number": "3",
+          "title": "Mejores unidades y creación de equipos",
+          "description": "Encuentra opciones fuertes para principiantes, prioridades de banner y equilibrio de roles para historia, desafíos y farmeo."
+        },
+        {
+          "number": "4",
+          "title": "Evoluciones, traits y endgame",
+          "description": "Entiende el valor de los traits, el momento de mejorar, las metas de evolución y cómo escalar hacia el meta de late game."
+        }
+      ]
+    },
+    "popular": {
+      "eyebrow": "Páginas populares",
+      "title": "Tendencias actuales",
+      "quickLinks": [
+        "Códigos activos",
+        "Mejores unidades",
+        "Rerolls de trait",
+        "Evoluciones"
+      ],
+      "cards": [
+        {
+          "badge": "Principiante",
+          "title": "Guía para principiantes",
+          "description": "Empieza Anime Vanguards con el ciclo principal, primeros summons, prioridades de mejora y decisiones tempranas de recursos.",
+          "href": "/guide/anime-vanguards-beginner-guide"
+        },
+        {
+          "badge": "Actualizado",
+          "title": "Códigos activos",
+          "description": "Códigos funcionales de Anime Vanguards con recompensas, notas de estado y pasos de canje.",
+          "href": "/codes"
+        },
+        {
+          "badge": "Actualizado",
+          "title": "Tier List",
+          "description": "Compara las mejores unidades para summons, evoluciones, limpieza de historia, farmeo y modos más difíciles.",
+          "href": "/tiers"
+        },
+        {
+          "badge": "Popular",
+          "title": "Guía de unidades",
+          "description": "Aprende elecciones iniciales, prioridades de summon, drops raros y unidades que valen inversión a largo plazo.",
+          "href": "/units"
+        },
+        {
+          "badge": "Nuevo",
+          "title": "Guía de traits",
+          "description": "Revisa traits raros, valor de reroll y los bonos que más importan para equipos más fuertes.",
+          "href": "/items"
+        },
+        {
+          "badge": "Popular",
+          "title": "Guía de Gems",
+          "description": "Encuentra rutas prácticas de farmeo de Gems para summons, mejoras y progreso estable de cuenta.",
+          "href": "/values"
+        },
+        {
+          "badge": "Popular",
+          "title": "Guía de evolución",
+          "description": "Sigue materiales de evolución, costes de Gold, requisitos de takedown y formas de unidad más fuertes.",
+          "href": "/guide"
+        },
+        {
+          "badge": "Nuevo",
+          "title": "Notas de actualización",
+          "description": "Sigue grandes actualizaciones de Anime Vanguards, nuevas unidades, tráilers y cambios de modo.",
+          "href": "/modes"
+        },
+        {
+          "badge": "Nuevo",
+          "title": "Rutas de farmeo",
+          "description": "Planifica actividades repetibles para Gems, rerolls, materiales y crecimiento de cuenta en late game.",
+          "href": "/guide/anime-vanguards-how-to-level-up-fast"
+        }
+      ]
+    },
+    "aboutGame": {
+      "title": "¿Qué es Anime Vanguards?",
+      "paragraphs": [
+        "Anime Vanguards es un anime tower defense de Roblox donde los jugadores invocan unidades, las colocan en escenarios y crean equipos alrededor de traits, evoluciones y sinergias específicas de cada modo.",
+        "Combina un progreso inicial accesible con un endgame profundo centrado en gestión de banners, farmeo de recursos, superación de desafíos y cambios de meta impulsados por actualizaciones."
+      ],
+      "stats": [
+        {
+          "label": "Desarrollador",
+          "value": "Kitawari"
+        },
+        {
+          "label": "Plataforma",
+          "value": "Roblox"
+        },
+        {
+          "label": "Género",
+          "value": "Anime Tower Defense"
+        },
+        {
+          "label": "Visitas",
+          "value": "1.94B+"
+        },
+        {
+          "label": "Favoritos",
+          "value": "1.95M+"
+        },
+        {
+          "label": "Pico de CCU",
+          "value": "340K"
+        },
+        {
+          "label": "Tamaño máx. de lobby",
+          "value": "24"
+        }
+      ],
+      "cta": "Explorar todas las guías"
+    },
+    "explore": {
+      "title": "Explora las guías de Anime Vanguards",
+      "description": "Ve directo a las ocho secciones de guías de Anime Vanguards y abre el módulo que necesitas.",
+      "modules": [
+        {
+          "order": 1,
+          "name": "Códigos de Anime Vanguards",
+          "description": "Encuentra los códigos más recientes de Anime Vanguards para Trait Rerolls gratis, Memoria Shards, Iced Teas y otras recompensas valiosas. Revisa la recompensa y el estado de cada código antes de visitar la guía completa de canje.",
+          "href": "/codes",
+          "displayType": "code-cards",
+          "highlights": [
+            {
+              "label": "13.5",
+              "detail": "Canjea por 50 Trait Rerolls y 5.000 Iced Teas.",
+              "badge": "Activo"
+            },
+            {
+              "label": "EternalAdversaries",
+              "detail": "Canjea por 50 Memoria Shards y 5.000 Iced Teas.",
+              "badge": "Activo"
+            },
+            {
+              "label": "Gambler",
+              "detail": "Canjea por 50 Trait Rerolls, 50 Memoria Shards y 5 Rainbow Essence Stones.",
+              "badge": "Activo"
+            },
+            {
+              "label": "Cog5th",
+              "detail": "Este código ya no está disponible para canjear.",
+              "badge": "Expirado"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "Tier List de Anime Vanguards",
+          "description": "Compara las mejores unidades de Anime Vanguards e identifica qué personajes valen summons, evoluciones y mejoras. Los rankings ofrecen una vista rápida de unidades top tier, confiables, situacionales y de baja prioridad.",
+          "href": "/tiers",
+          "displayType": "tier-grid",
+          "highlights": [
+            {
+              "label": "S",
+              "detail": "Demon Leader (Control), God (Above Heaven), Song Jinwu e Igros, Gujo (Infinity), Lich King (Ruler), Rogita (Super 4), Ice Queen (Release) y Alocard (Vampire King)."
+            },
+            {
+              "label": "A",
+              "detail": "Deceiver (Monster), Horsegirls (Racers), Igros (Elite Knight), Astolfo (Rider of Black), Ice Manipulator (Admiral), Company Captain (Hybrid), Armored Mage (Requip), Elastic Captain (Pirate), Fastest Shinobi (Flash), Delusional Demon (Blood), Saber (Black Tyrant) y Slime (King)."
+            },
+            {
+              "label": "B",
+              "detail": "Warlord (Of the Sea) y Fallen Angel (Pistols)."
+            },
+            {
+              "label": "C",
+              "detail": "Manipulator (Spider), con Gazelle (Zombie) y Leo (Fangs) colocados por debajo de este tier en los rankings de referencia."
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "Guía para principiantes de Anime Vanguards",
+          "description": "Sigue una ruta práctica de progreso para empezar Anime Vanguards, ganar gems, invocar unidades y desbloquear sistemas importantes de mejora. Estos pasos ayudan a los nuevos jugadores a evitar desperdiciar recursos iniciales.",
+          "href": "/guide/anime-vanguards-beginner-guide",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "Canjea códigos activos desde los menús Profile y Codes para conseguir rerolls, shards y materiales de mejora gratis."
+            },
+            {
+              "label": "2",
+              "detail": "Elige tu unidad inicial y visita el Summon Portal en el hub para ampliar tu equipo. Los summons estándar cuestan 50 Gems cada uno."
+            },
+            {
+              "label": "3",
+              "detail": "Completa fases de Story para desbloquear más contenido y ganar aproximadamente de 80 a 240 Gems por fase."
+            },
+            {
+              "label": "4",
+              "detail": "Usa Mandra para Trait Rerolls y Cyan para rerolls de estadísticas cuando empieces a mejorar tus unidades más fuertes."
+            },
+            {
+              "label": "5",
+              "detail": "Pasa a Infinite Mode, raids, quests y boss bounties después de crear un equipo confiable para Story Mode."
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "name": "Guía de traits de Anime Vanguards",
+          "description": "Aprende cómo los traits de Anime Vanguards mejoran daño, velocidad de ataque, alcance y rendimiento general de las unidades. Compara traits raros y entiende qué bonos vale conservar antes de gastar más Trait Rerolls.",
+          "href": "/items",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Monarch",
+              "detail": "Tiene una probabilidad de reroll de 0,1% y otorga 300% de daño, 10% menos SPA y 5% de alcance adicional, pero limita la unidad a una sola colocación."
+            },
+            {
+              "label": "Ethereal",
+              "detail": "Tiene una probabilidad de reroll de 0,175% y otorga 20% de daño, 20% menos SPA y 5% de alcance adicional."
+            },
+            {
+              "label": "Deadeye",
+              "detail": "Tiene una probabilidad de reroll de 0,375% y otorga 45% de probabilidad crítica y 50% de daño crítico."
+            },
+            {
+              "label": "Trait Rerolls",
+              "detail": "Los traits se pueden rerollear con Mandra cerca del área de Evolve usando objetos Trait Reroll obtenidos de códigos, quests, desafíos y recompensas de progreso."
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "name": "Guía de unidades de Anime Vanguards",
+          "description": "Descubre cómo obtener unidades de Anime Vanguards mediante elecciones iniciales, summons, drops de escenarios y banners especiales. La guía también destaca personajes raros que requieren mucho farmeo o suerte en summons.",
+          "href": "/units",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Unidades iniciales",
+              "detail": "Los nuevos jugadores empiezan eligiendo entre Ichiga, Roku y Luffo antes de formar un equipo más grande."
+            },
+            {
+              "label": "Summon Portal",
+              "detail": "Los summons de banner estándar cuestan 50 Gems cada uno y son el método principal para obtener unidades adicionales."
+            },
+            {
+              "label": "Igros",
+              "detail": "Igros puede caer en el Act 3 de Dungeon Disaster con una probabilidad de drop reportada de 0,75%."
+            },
+            {
+              "label": "Alocard",
+              "detail": "Alocard es una unidad Secret de summon asociada con una probabilidad de summon reportada extremadamente baja de 0,004%."
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "name": "Guía de Gems de Anime Vanguards",
+          "description": "Aprende las formas más útiles de conseguir Gems para summons y progreso de cuenta. Compara actividades repetibles, recompensas diarias y métodos de farmeo por escenario antes de decidir dónde invertir tu tiempo de juego.",
+          "href": "/values",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Fases de Story",
+              "detail": "El progreso de Story puede otorgar aproximadamente de 80 a 240 Gems por fase completada."
+            },
+            {
+              "label": "Infinite Mode",
+              "detail": "Infinite Mode puede generar aproximadamente de 1.700 a 2.100 Gems por hora según la velocidad de progreso y fuerza del equipo."
+            },
+            {
+              "label": "Boss Bounties",
+              "detail": "Los boss bounties pueden otorgar 500 Gems por completado hasta diez veces al día, para un total de hasta 5.000 Gems."
+            },
+            {
+              "label": "Worldlines",
+              "detail": "Worldlines otorga 250 Gems por cada uno de los primeros 50 pisos y 150 Gems por cada piso posterior."
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "Guía de evolución de Anime Vanguards",
+          "description": "Revisa los materiales, monedas y requisitos de takedown necesarios para evolucionar unidades populares de Anime Vanguards. La evolución puede desbloquear formas más fuertes, habilidades mejoradas y mucho mejor rendimiento en late game.",
+          "href": "/guide",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Gujo Infinity",
+              "detail": "Evolucionar a Gujo en Gujo (Infinity) requiere los materiales de evolución necesarios y 15.000 Gold."
+            },
+            {
+              "label": "Igros Elite Knight",
+              "detail": "Requiere 30.000 Gold, 32 Green Essence Stones, 10 Red Essence Stones, 12 Blood-Red Armor, 10 Blue Essence Stones, 10 Pink Essence Stones y 1 Rainbow Essence Stone."
+            },
+            {
+              "label": "Alocard Vampire King",
+              "detail": "Requiere 30.000 Gold, 1 Hellsing Arms, 35 Green Essence Stones, 13 Yellow Essence Stones, 13 Purple Essence Stones, 13 Red Essence Stones y 2 Rainbow Essence Stones."
+            },
+            {
+              "label": "Tuji Sorcerer Killer",
+              "detail": "Requiere 5.000 takedowns, 30.000 Gold, 1 Cursed Worm, 40 Green Essence Stones, 15 Blue Essence Stones, 15 Purple Essence Stones, 15 Red Essence Stones y 4 Rainbow Essence Stones."
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "Actualizaciones de Anime Vanguards",
+          "description": "Sigue grandes actualizaciones de Anime Vanguards, tráilers, nuevas unidades, modos de juego y sistemas de progreso. Esta sección ofrece una ruta clara hacia cobertura detallada basada en anuncios y videos oficiales.",
+          "href": "/modes",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Godly Ascension",
+              "detail": "La Update 13.0 introdujo seis unidades nuevas, una nueva Story, un nuevo Rift y unidad de Rift, un nuevo Battlepass, el modo Pirate Dynasty y seis Memorias nuevas."
+            },
+            {
+              "label": "Gear 5th",
+              "detail": "La cuenta oficial de Anime Vanguards anunció Gear 5th junto con el tráiler de Godly Ascension y el despliegue de la actualización."
+            },
+            {
+              "label": "Eternal Adversaries",
+              "detail": "Eternal Adversaries recibió un tráiler dedicado publicado por el canal oficial de Anime Vanguards en YouTube."
+            },
+            {
+              "label": "Jugabilidad central",
+              "detail": "La página oficial de Roblox describe un ciclo de juego centrado en invocar unidades, subirlas de nivel, evolucionarlas y completar varios modos con amigos."
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "description": "Respuestas rápidas a las preguntas más comunes sobre Anime Vanguards.",
+      "items": [
+        {
+          "question": "¿Qué es Anime Vanguards?",
+          "answer": "Anime Vanguards es un anime tower defense de Roblox donde los jugadores invocan unidades, las colocan en escenarios, mejoran equipos y superan modos basados en traits, evoluciones y farmeo de recursos."
+        },
+        {
+          "question": "¿Qué deben hacer primero los principiantes en Anime Vanguards?",
+          "answer": "Los principiantes de Anime Vanguards deben canjear códigos activos, completar las primeras fases de Story, guardar Gems para banners útiles y concentrar mejoras en un equipo pequeño antes de intentar modos más difíciles."
+        },
+        {
+          "question": "¿Dónde puedo encontrar códigos de Anime Vanguards?",
+          "answer": "Los códigos de Anime Vanguards se siguen en la página de Códigos con detalles de recompensas, notas de estado y pasos de canje para consultar rerolls, shards, Iced Teas y otras recompensas rápidamente."
+        },
+        {
+          "question": "¿Qué unidades de Anime Vanguards debería construir?",
+          "answer": "Los jugadores de Anime Vanguards deben comparar la tier list, banners actuales, evoluciones y materiales disponibles antes de invertir mucho en una unidad, especialmente durante cambios de meta impulsados por actualizaciones."
+        },
+        {
+          "question": "¿Cómo funcionan los traits y las evoluciones en Anime Vanguards?",
+          "answer": "Los traits de Anime Vanguards añaden bonos potentes a las unidades mediante rerolls, mientras que las evoluciones usan materiales, Gold y requisitos de progreso para desbloquear formas más fuertes para contenido avanzado."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "¿Listo para dominar Anime Vanguards?",
+      "description": "Desde tus primeros summons en Roblox hasta la optimización de traits y clears de endgame, esta wiki de fans mantiene cerca el siguiente paso inteligente.",
+      "primary": "Ver guías de Roblox",
+      "secondary": "Jugar en Roblox"
+    }
+  },
+  "codes": {
+    "overviewTitle": "Códigos de Anime Vanguards",
+    "overviewDescription": "Sigue guías de códigos de Anime Vanguards, notas de canje, explicaciones de recompensas y cobertura de códigos por actualización."
+  },
+  "tiers": {
+    "overviewTitle": "Tier Lists de Anime Vanguards",
+    "overviewDescription": "Compara rankings de Anime Vanguards para unidades, Memoria, picks de meta y prioridades de progreso por actualización."
+  },
+  "values": {
+    "overviewTitle": "Valores de Anime Vanguards",
+    "overviewDescription": "Revisa valores de intercambio, calculadoras, planificación de pity y referencias de listas de valor para tomar mejores decisiones en Anime Vanguards."
+  },
+  "units": {
+    "overviewTitle": "Unidades de Anime Vanguards",
+    "overviewDescription": "Explora guías de unidades de Anime Vanguards sobre personajes, evoluciones, objetivos de summon y prioridades de inversión."
+  },
+  "items": {
+    "overviewTitle": "Objetos de Anime Vanguards",
+    "overviewDescription": "Encuentra guías de Familiars, Memoria, Relics, pociones, dados y otros objetos que dan forma a builds de Anime Vanguards."
+  },
+  "modes": {
+    "overviewTitle": "Modos de Anime Vanguards",
+    "overviewDescription": "Explora guías de modos de Anime Vanguards para Odyssey, Elemental Towers, Godly Ascension y desafíos específicos de evento."
+  },
+  "guide": {
+    "overviewTitle": "Guía de Anime Vanguards",
+    "overviewDescription": "Empieza con guías prácticas de Anime Vanguards para principiantes, evoluciones, subir de nivel, progreso y pasos de puzzles."
+  },
+  "community": {
+    "overviewTitle": "Comunidad de Anime Vanguards",
+    "overviewDescription": "Sigue recursos de la comunidad de Anime Vanguards, cobertura de Discord y conversaciones sobre grandes momentos del juego."
+  },
+  "shared": {
+    "menu": "Menú",
+    "toggleTheme": "Cambiar tema",
+    "wikiNavigation": "Navegación de la wiki",
+    "activeCodes": "Códigos activos",
+    "updated": "Actualizado",
+    "viewAllCodes": "Ver todos los códigos",
+    "playOnRoblox": "Jugar en Roblox",
+    "inThisSection": "En esta sección",
+    "tableOfContents": "Tabla de contenidos",
+    "nextSteps": "Siguientes pasos",
+    "needHelp": "¿Necesitas ayuda?",
+    "relatedReading": "Lectura relacionada",
+    "relatedGuides": "Guías relacionadas",
+    "readMore": "Leer más",
+    "officialMedia": "Medios oficiales",
+    "home": "Inicio",
+    "noGuidesAvailable": "Aún no hay guías disponibles. ¡Vuelve pronto!"
+  },
+  "footer": {
+    "aboutTitle": "Wiki de Anime Vanguards",
+    "about": "La Wiki de Anime Vanguards es un hub independiente de guías hecho por fans para jugadores de Roblox. Cubre progreso inicial, elección de unidades, traits, evoluciones, farmeo, códigos y explicaciones de actualizaciones.",
+    "quickLinks": "Enlaces rápidos",
+    "guides": "Guías",
+    "legal": "Legal",
+    "copyright": "2026 Wiki de Anime Vanguards. No afiliada a Kitawari ni Roblox.",
+    "description": "Anime tower defense de Roblox inspirado en anime, creado por Kitawari, con summons, evoluciones, traits, códigos y una enorme comunidad activa.",
+    "playGame": "Jugar Anime Vanguards en Roblox",
+    "officialDiscord": "Discord oficial",
+    "officialYoutube": "YouTube oficial",
+    "officialWebsite": "Sitio oficial",
+    "robloxGroup": "Grupo de Roblox de Kitawari",
+    "beginnerGuide": "Guía para principiantes",
+    "codesGuide": "Códigos",
+    "tierLists": "Tier Lists",
+    "unitsGuide": "Unidades",
+    "valuesGuide": "Valores",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio"
+  }
+}

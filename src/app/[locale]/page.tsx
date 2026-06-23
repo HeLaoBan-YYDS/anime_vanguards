@@ -10,17 +10,33 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://anime-vanguards-wik
 
 type Messages = typeof en;
 
+function localizedPath(locale: string, pathname: string) {
+  return locale === routing.defaultLocale ? pathname : `/${locale}${pathname === "/" ? "" : pathname}`;
+}
+
+function localizedUrl(locale: string, pathname: string) {
+  const path = localizedPath(locale, pathname);
+  return `${siteUrl}${path === "/" ? "" : path}`;
+}
+
+function languageAlternates(pathname: string) {
+  return {
+    "x-default": localizedPath(routing.defaultLocale, pathname),
+    ...Object.fromEntries(routing.locales.map((locale) => [locale, localizedPath(locale, pathname)])),
+  };
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await getMessages({ locale })) as Messages;
-  const title = `${messages.site.name} - Codes, Units & Guide`;
-  const description = messages.site.description;
+  const title = messages.home.meta.title;
+  const description = messages.home.meta.description;
   const image = `${siteUrl}/images/hero.webp`;
   return {
     title,
     description,
-    alternates: { canonical: locale === "en" ? "/" : `/${locale}`, languages: { en: "/" } },
-    openGraph: { title, description, url: siteUrl, siteName: messages.site.name, images: [image] },
+    alternates: { canonical: localizedPath(locale, "/"), languages: languageAlternates("/") },
+    openGraph: { title, description, url: localizedUrl(locale, "/"), siteName: messages.site.name, images: [image] },
     twitter: { card: "summary_large_image", title, description, images: [image] },
   };
 }

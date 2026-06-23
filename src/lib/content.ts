@@ -260,18 +260,18 @@ const GROUP_TITLES_JA: Record<string, string> = {
 };
 
 const GROUP_TITLES_ES: Record<string, string> = {
-  codes: "Codigos",
+  codes: "Códigos",
   tiers: "Tier Lists",
   values: "Valores",
   units: "Unidades",
   items: "Objetos",
   modes: "Modos",
-  guide: "Guia",
+  guide: "Guía",
   community: "Comunidad",
 };
 
 const GROUP_TITLES_PT_BR: Record<string, string> = {
-  codes: "Codigos",
+  codes: "Códigos",
   tiers: "Tier Lists",
   values: "Valores",
   units: "Unidades",
@@ -292,7 +292,7 @@ const GROUP_TITLES_BY_LOCALE: Record<string, Record<string, string>> = {
 const OVERVIEW_LABEL_BY_LOCALE: Record<string, string> = {
   es: "Resumen",
   ja: "一覧",
-  "pt-br": "Visao geral",
+  "pt-br": "Visão geral",
 };
 
 // 分组排序顺序

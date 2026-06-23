@@ -1,1 +1,494 @@
-{}
+{
+  "site": {
+    "name": "Anime Vanguards 攻略Wiki",
+    "shortName": "Anime Vanguards",
+    "tagline": "ファンメイドのコミュニティWiki",
+    "description": "Anime Vanguards 攻略Wikiは、KitawariのRoblox向けアニメタワーディフェンスで、コード、ユニット、traits、進化、周回ルート、アップデート情報、初心者の進行を追いやすくします。",
+    "legalNotice": "独立したファンWikiです。Kitawari、Roblox、Anime Vanguards公式チャンネルとは提携していません。"
+  },
+  "nav": {
+    "codes": "コード",
+    "tiers": "ティア",
+    "values": "価値",
+    "units": "ユニット",
+    "items": "アイテム",
+    "modes": "モード",
+    "guide": "ガイド",
+    "community": "コミュニティ"
+  },
+  "home": {
+    "meta": {
+      "title": "Anime Vanguards 攻略Wiki - コード・ユニット・ガイド",
+      "description": "RobloxのAnime Vanguards攻略。初心者進行、ユニット、traits、進化、周回ルート、バナー、更新情報、コード確認をまとめています。"
+    },
+    "hero": {
+      "eyebrow": "ファンメイドのコミュニティWiki",
+      "title": "Anime Vanguards 攻略Wiki",
+      "description": "RobloxのAnime Vanguardsを、summon、ユニット、traits、進化、周回、アップデート、アクティブコード確認まで、実用的なルートで素早く攻略できます。",
+      "stats": [
+        "2024年9月8日リリース",
+        "2026年6月22日更新",
+        "訪問数 19.4億+",
+        "お気に入り 195万+",
+        "ピーク同時接続 34万"
+      ],
+      "primaryCta": "Robloxでプレイ",
+      "secondaryCta": "公式Discordに参加",
+      "tertiaryCta": "公式YouTubeを見る",
+      "videoLabel": "公式メディア"
+    },
+    "updates": {
+      "title": "最新アップデート",
+      "browse": "すべてのガイドを見る",
+      "viewAll": "すべて表示"
+    },
+    "start": {
+      "eyebrow": "ここから開始",
+      "title": "Anime Vanguards攻略の進め方",
+      "cards": [
+        {
+          "number": "1",
+          "title": "初心者ガイド",
+          "description": "基本ループ、最初のリソースの使い道、序盤で避けたい進行ミスを学びます。"
+        },
+        {
+          "number": "2",
+          "title": "Gems、Gold、rerollを周回",
+          "description": "序盤通貨、バナー召喚、最初の数時間のreroll効率を高める最短ルートです。"
+        },
+        {
+          "number": "3",
+          "title": "最強ユニットとチーム編成",
+          "description": "初心者にも扱いやすい強力な候補、バナー優先度、StoryやChallenge、周回向けの役割バランスを確認できます。"
+        },
+        {
+          "number": "4",
+          "title": "進化、traits、エンドゲーム",
+          "description": "traitの価値、強化タイミング、進化目標、終盤メタへ伸ばす流れを理解できます。"
+        }
+      ]
+    },
+    "popular": {
+      "eyebrow": "人気ページ",
+      "title": "注目コンテンツ",
+      "quickLinks": [
+        "アクティブコード",
+        "最強ユニット",
+        "Trait Rerolls",
+        "進化"
+      ],
+      "cards": [
+        {
+          "badge": "初心者",
+          "title": "初心者ガイド",
+          "description": "Anime Vanguardsの基本ループ、最初のsummon、強化優先度、序盤リソースの選び方から始めましょう。",
+          "href": "/guide/anime-vanguards-beginner-guide"
+        },
+        {
+          "badge": "更新済み",
+          "title": "アクティブコード",
+          "description": "使えるAnime Vanguardsコードを、報酬、ステータス、引き換え手順つきで確認できます。",
+          "href": "/codes"
+        },
+        {
+          "badge": "更新済み",
+          "title": "ティアリスト",
+          "description": "summon、進化、Story攻略、周回、高難度モード向けの最良ユニットを比較できます。",
+          "href": "/tiers"
+        },
+        {
+          "badge": "人気",
+          "title": "ユニットガイド",
+          "description": "初期選択、summon優先度、レアドロップ、長期投資に値するユニットを学べます。",
+          "href": "/units"
+        },
+        {
+          "badge": "新規",
+          "title": "Traitsガイド",
+          "description": "レアtraits、reroll価値、強いチームに重要なボーナスを確認できます。",
+          "href": "/items"
+        },
+        {
+          "badge": "人気",
+          "title": "Gemsガイド",
+          "description": "summon、強化、安定したアカウント成長に役立つ実用的なGem周回ルートを探せます。",
+          "href": "/values"
+        },
+        {
+          "badge": "人気",
+          "title": "進化ガイド",
+          "description": "進化素材、Goldコスト、takedown条件、より強力なユニット形態を追跡できます。",
+          "href": "/guide"
+        },
+        {
+          "badge": "新規",
+          "title": "アップデートノート",
+          "description": "Anime Vanguardsの大型アップデート、新ユニット、トレーラー、モード変更を追えます。",
+          "href": "/modes"
+        },
+        {
+          "badge": "新規",
+          "title": "周回ルート",
+          "description": "Gems、rerolls、素材、終盤のアカウント成長に向けた反復アクティビティを計画できます。",
+          "href": "/guide/anime-vanguards-how-to-level-up-fast"
+        }
+      ]
+    },
+    "aboutGame": {
+      "title": "Anime Vanguardsとは？",
+      "paragraphs": [
+        "Anime VanguardsはRobloxのアニメタワーディフェンスで、プレイヤーはユニットを召喚し、ステージに配置し、traits、進化、各モード固有のシナジーを軸にチームを組みます。",
+        "序盤は入りやすく、終盤はバナー管理、リソース周回、チャレンジ攻略、アップデートごとのメタ変化を重視する奥深い構成です。"
+      ],
+      "stats": [
+        {
+          "label": "開発元",
+          "value": "Kitawari"
+        },
+        {
+          "label": "プラットフォーム",
+          "value": "Roblox"
+        },
+        {
+          "label": "ジャンル",
+          "value": "アニメタワーディフェンス"
+        },
+        {
+          "label": "訪問数",
+          "value": "1.94B+"
+        },
+        {
+          "label": "お気に入り",
+          "value": "1.95M+"
+        },
+        {
+          "label": "ピークCCU",
+          "value": "340K"
+        },
+        {
+          "label": "最大ロビー人数",
+          "value": "24"
+        }
+      ],
+      "cta": "すべてのガイドを見る"
+    },
+    "explore": {
+      "title": "Anime Vanguardsガイドを探す",
+      "description": "Anime Vanguardsの8つのガイドセクションへ直接移動し、必要なモジュールを開けます。",
+      "modules": [
+        {
+          "order": 1,
+          "name": "Anime Vanguardsコード",
+          "description": "無料のTrait Rerolls、Memoria Shards、Iced Teas、その他の貴重な報酬がもらえる最新のAnime Vanguardsコードを確認できます。完全な引き換えガイドを見る前に、各コードの報酬とステータスを確認しましょう。",
+          "href": "/codes",
+          "displayType": "code-cards",
+          "highlights": [
+            {
+              "label": "13.5",
+              "detail": "50 Trait Rerollsと5,000 Iced Teasと交換できます。",
+              "badge": "有効"
+            },
+            {
+              "label": "EternalAdversaries",
+              "detail": "50 Memoria Shardsと5,000 Iced Teasと交換できます。",
+              "badge": "有効"
+            },
+            {
+              "label": "Gambler",
+              "detail": "50 Trait Rerolls、50 Memoria Shards、5 Rainbow Essence Stonesと交換できます。",
+              "badge": "有効"
+            },
+            {
+              "label": "Cog5th",
+              "detail": "このコードは現在引き換えできません。",
+              "badge": "期限切れ"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "Anime Vanguardsティアリスト",
+          "description": "Anime Vanguardsの最良ユニットを比較し、summon、進化、強化する価値があるキャラクターを見極めます。ランキングでは、最上位、安定枠、状況依存、低優先度のユニットを素早く把握できます。",
+          "href": "/tiers",
+          "displayType": "tier-grid",
+          "highlights": [
+            {
+              "label": "S",
+              "detail": "Demon Leader (Control)、God (Above Heaven)、Song Jinwu and Igros、Gujo (Infinity)、Lich King (Ruler)、Rogita (Super 4)、Ice Queen (Release)、Alocard (Vampire King)。"
+            },
+            {
+              "label": "A",
+              "detail": "Deceiver (Monster)、Horsegirls (Racers)、Igros (Elite Knight)、Astolfo (Rider of Black)、Ice Manipulator (Admiral)、Company Captain (Hybrid)、Armored Mage (Requip)、Elastic Captain (Pirate)、Fastest Shinobi (Flash)、Delusional Demon (Blood)、Saber (Black Tyrant)、Slime (King)。"
+            },
+            {
+              "label": "B",
+              "detail": "Warlord (Of the Sea)とFallen Angel (Pistols)。"
+            },
+            {
+              "label": "C",
+              "detail": "Manipulator (Spider)。参照ランキングではGazelle (Zombie)とLeo (Fangs)がこのティアより下に配置されています。"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "Anime Vanguards初心者ガイド",
+          "description": "Anime Vanguardsを始め、gemsを稼ぎ、ユニットを召喚し、重要な強化システムを解放するための実用的な進行ルートです。序盤リソースの浪費を避ける助けになります。",
+          "href": "/guide/anime-vanguards-beginner-guide",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "ProfileとCodesメニューからアクティブコードを引き換え、無料rerolls、shards、強化素材を集めましょう。"
+            },
+            {
+              "label": "2",
+              "detail": "初期ユニットを選び、hubのSummon Portalでチームを広げます。通常summonは1回50 Gemsです。"
+            },
+            {
+              "label": "3",
+              "detail": "Storyステージをクリアしてコンテンツを解放し、1ステージあたり約80から240 Gemsを獲得します。"
+            },
+            {
+              "label": "4",
+              "detail": "強力なユニットを伸ばし始める段階で、Mandraを使ってTrait Rerolls、Cyanを使ってステータスrerollを行います。"
+            },
+            {
+              "label": "5",
+              "detail": "安定したStory Modeチームを作ったら、Infinite Mode、raids、quests、boss bountiesへ進みましょう。"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "name": "Anime Vanguards traitsガイド",
+          "description": "Anime Vanguardsのtraitsがユニットのダメージ、攻撃速度、射程、総合性能をどう強化するかを学べます。レアtraitsを比較し、さらにTrait Rerollsを使う前に残す価値のあるボーナスを理解しましょう。",
+          "href": "/items",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Monarch",
+              "detail": "reroll確率は0.1%。300% Damage、SPA10%低下、Range5%追加を与えますが、配置数は1体に制限されます。"
+            },
+            {
+              "label": "Ethereal",
+              "detail": "reroll確率は0.175%。20% Damage、SPA20%低下、Range5%追加を与えます。"
+            },
+            {
+              "label": "Deadeye",
+              "detail": "reroll確率は0.375%。45% Critical Chanceと50% Critical Damageを与えます。"
+            },
+            {
+              "label": "Trait Rerolls",
+              "detail": "TraitsはEvolveエリア近くのMandraでrerollできます。必要なTrait Rerollアイテムはコード、quests、challenges、進行報酬から入手できます。"
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "name": "Anime Vanguardsユニットガイド",
+          "description": "初期選択、summons、ステージドロップ、特別バナーからAnime Vanguardsのユニットを入手する方法を確認できます。大量の周回や召喚運が必要なレアキャラクターも紹介します。",
+          "href": "/units",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "初期ユニット",
+              "detail": "新規プレイヤーはIchiga、Roku、Luffoから選び、そこから大きなチームを作っていきます。"
+            },
+            {
+              "label": "Summon Portal",
+              "detail": "通常バナーのsummonは1回50 Gemsで、追加ユニットを入手する主な方法です。"
+            },
+            {
+              "label": "Igros",
+              "detail": "IgrosはDungeon DisasterのAct 3からドロップする可能性があり、報告されているドロップ率は0.75%です。"
+            },
+            {
+              "label": "Alocard",
+              "detail": "AlocardはSecret summonユニットで、報告されているsummon確率は極めて低い0.004%です。"
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "name": "Anime Vanguards Gemsガイド",
+          "description": "summonとアカウント進行に役立つGemsの稼ぎ方を学べます。反復アクティビティ、デイリー報酬、ステージ周回方法を比較し、プレイ時間の使い道を決めましょう。",
+          "href": "/values",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Storyステージ",
+              "detail": "Story進行では、クリアしたステージごとに約80から240 Gemsを獲得できます。"
+            },
+            {
+              "label": "Infinite Mode",
+              "detail": "Infinite Modeでは、進行速度とチームの強さに応じて1時間あたり約1,700から2,100 Gemsを稼げます。"
+            },
+            {
+              "label": "Boss Bounties",
+              "detail": "boss bountiesは1回完了で500 Gems、1日最大10回で合計5,000 Gemsまで獲得できます。"
+            },
+            {
+              "label": "Worldlines",
+              "detail": "Worldlinesは最初の50階まで各250 Gems、それ以降は各階150 Gemsを付与します。"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "Anime Vanguards進化ガイド",
+          "description": "人気ユニットを進化させるために必要な素材、通貨、takedown条件を確認できます。進化により強化形態、改善された能力、終盤で大きく伸びる性能を解放できます。",
+          "href": "/guide",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Gujo Infinity",
+              "detail": "GujoをGujo (Infinity)へ進化させるには、必要な進化素材と15,000 Goldが必要です。"
+            },
+            {
+              "label": "Igros Elite Knight",
+              "detail": "30,000 Gold、32 Green Essence Stones、10 Red Essence Stones、12 Blood-Red Armor、10 Blue Essence Stones、10 Pink Essence Stones、1 Rainbow Essence Stoneが必要です。"
+            },
+            {
+              "label": "Alocard Vampire King",
+              "detail": "30,000 Gold、1 Hellsing Arms、35 Green Essence Stones、13 Yellow Essence Stones、13 Purple Essence Stones、13 Red Essence Stones、2 Rainbow Essence Stonesが必要です。"
+            },
+            {
+              "label": "Tuji Sorcerer Killer",
+              "detail": "5,000 takedowns、30,000 Gold、1 Cursed Worm、40 Green Essence Stones、15 Blue Essence Stones、15 Purple Essence Stones、15 Red Essence Stones、4 Rainbow Essence Stonesが必要です。"
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "Anime Vanguardsアップデート",
+          "description": "Anime Vanguardsの大型アップデート、トレーラー、新ユニット、ゲームモード、進行システムを追えます。このセクションでは、公式発表や動画をもとに詳細な更新情報へ進めます。",
+          "href": "/modes",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Godly Ascension",
+              "detail": "Update 13.0では、6体の新ユニット、新しいStory、新しいRiftとRiftユニット、新Battlepass、Pirate Dynastyゲームモード、6つの新Memoriasが追加されました。"
+            },
+            {
+              "label": "Gear 5th",
+              "detail": "Anime Vanguards公式アカウントは、Godly Ascensionトレーラーとアップデート展開にあわせてGear 5thを発表しました。"
+            },
+            {
+              "label": "Eternal Adversaries",
+              "detail": "Eternal Adversariesは、Anime Vanguards公式YouTubeチャンネルで専用トレーラーが公開されました。"
+            },
+            {
+              "label": "基本ゲームプレイ",
+              "detail": "Roblox公式ページでは、ユニット召喚、レベル上げと進化、友達と複数モードをクリアする流れが中心として説明されています。"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "よくある質問",
+      "description": "Anime Vanguardsに関するよくある質問への簡潔な回答です。",
+      "items": [
+        {
+          "question": "Anime Vanguardsとは？",
+          "answer": "Anime VanguardsはRobloxのアニメタワーディフェンスです。プレイヤーはユニットを召喚し、ステージに配置し、チームを強化し、traits、進化、リソース周回を軸にしたモードを攻略します。"
+        },
+        {
+          "question": "Anime Vanguards初心者は最初に何をすべきですか？",
+          "answer": "初心者はアクティブコードを引き換え、序盤のStoryステージを進め、便利なバナー用にGemsを貯め、難しいモードへ進む前に少数のチームへ強化を集中させましょう。"
+        },
+        {
+          "question": "Anime Vanguardsのコードはどこで確認できますか？",
+          "answer": "Anime Vanguardsのコードはコードページで追跡しています。報酬内容、ステータス、引き換え手順があるため、rerolls、shards、Iced Teasなどを素早く確認できます。"
+        },
+        {
+          "question": "どのAnime Vanguardsユニットを育成すべきですか？",
+          "answer": "アップデートでメタが変わるため、ユニットへ大きく投資する前に、ティアリスト、現在のバナー、進化、手持ち素材を比較しましょう。"
+        },
+        {
+          "question": "Traitsと進化はAnime Vanguardsでどう機能しますか？",
+          "answer": "Traitsはrerollによって強力なユニットボーナスを付与し、進化は素材、Gold、進行条件を使って後半コンテンツ向けの強化形態を解放します。"
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Anime Vanguardsを攻略する準備はできましたか？",
+      "description": "Robloxでの最初のsummonからtrait最適化、エンドゲーム攻略まで、このファンWikiが次に取るべき一手をすぐ近くに置きます。",
+      "primary": "Robloxガイドを見る",
+      "secondary": "Robloxでプレイ"
+    }
+  },
+  "codes": {
+    "overviewTitle": "Anime Vanguardsコード",
+    "overviewDescription": "Anime Vanguardsのコードガイド、引き換えメモ、報酬解説、アップデート別コード情報を確認できます。"
+  },
+  "tiers": {
+    "overviewTitle": "Anime Vanguardsティアリスト",
+    "overviewDescription": "ユニット、Memoria、メタ候補、アップデート別の進行優先度について、Anime Vanguardsのランキングを比較できます。"
+  },
+  "values": {
+    "overviewTitle": "Anime Vanguards価値",
+    "overviewDescription": "交換価値、計算機、pity計画、価値リスト参照を確認し、Anime Vanguardsでより良い判断を行えます。"
+  },
+  "units": {
+    "overviewTitle": "Anime Vanguardsユニット",
+    "overviewDescription": "キャラクター、進化、summon目標、投資優先度を扱うAnime Vanguardsユニットガイドを閲覧できます。"
+  },
+  "items": {
+    "overviewTitle": "Anime Vanguardsアイテム",
+    "overviewDescription": "Familiars、Memoria、Relics、ポーション、ダイスなど、Anime Vanguardsのビルドに影響するアイテムガイドを探せます。"
+  },
+  "modes": {
+    "overviewTitle": "Anime Vanguardsモード",
+    "overviewDescription": "Odyssey、Elemental Towers、Godly Ascension、イベント固有チャレンジ向けのAnime Vanguardsモードガイドを確認できます。"
+  },
+  "guide": {
+    "overviewTitle": "Anime Vanguardsガイド",
+    "overviewDescription": "初心者、進化、レベル上げ、進行、パズル手順に役立つ実用的なAnime Vanguardsガイドから始めましょう。"
+  },
+  "community": {
+    "overviewTitle": "Anime Vanguardsコミュニティ",
+    "overviewDescription": "Anime Vanguardsのコミュニティリソース、Discord情報、大きな話題に関する議論を追えます。"
+  },
+  "shared": {
+    "menu": "メニュー",
+    "toggleTheme": "テーマを切り替え",
+    "wikiNavigation": "Wikiナビゲーション",
+    "activeCodes": "アクティブコード",
+    "updated": "更新済み",
+    "viewAllCodes": "すべてのコードを見る",
+    "playOnRoblox": "Robloxでプレイ",
+    "inThisSection": "このセクション",
+    "tableOfContents": "目次",
+    "nextSteps": "次のステップ",
+    "needHelp": "ヘルプが必要ですか？",
+    "relatedReading": "関連記事",
+    "relatedGuides": "関連ガイド",
+    "readMore": "続きを読む",
+    "officialMedia": "公式メディア",
+    "home": "ホーム",
+    "noGuidesAvailable": "まだガイドはありません。しばらくしてから確認してください。"
+  },
+  "footer": {
+    "aboutTitle": "Anime Vanguards 攻略Wiki",
+    "about": "Anime Vanguards 攻略Wikiは、Robloxプレイヤー向けにファンが作った独立ガイドハブです。初心者進行、ユニット選択、traits、進化、周回、コード、アップデート解説を扱います。",
+    "quickLinks": "クイックリンク",
+    "guides": "ガイド",
+    "legal": "法的情報",
+    "copyright": "2026 Anime Vanguards 攻略Wiki。KitawariまたはRobloxとは提携していません。",
+    "description": "Kitawariによるアニメ風Robloxタワーディフェンス。summon、進化、traits、コード、大規模なライブコミュニティが特徴です。",
+    "playGame": "RobloxでAnime Vanguardsをプレイ",
+    "officialDiscord": "公式Discord",
+    "officialYoutube": "公式YouTube",
+    "officialWebsite": "公式サイト",
+    "robloxGroup": "Kitawari Robloxグループ",
+    "beginnerGuide": "初心者ガイド",
+    "codesGuide": "コード",
+    "tierLists": "ティアリスト",
+    "unitsGuide": "ユニット",
+    "valuesGuide": "価値",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約"
+  }
+}
