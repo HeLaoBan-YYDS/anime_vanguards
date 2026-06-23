@@ -20,8 +20,10 @@ export async function SiteHeader({ locale }: { locale: string }) {
   const header = (
     <div className="flex items-center justify-between gap-4">
       <Link href={localizeHref("/", locale)} className="flex items-center gap-3">
-        <span className="grid h-9 w-9 place-items-center rounded-xl border border-border bg-muted text-sm font-black text-foreground">VV</span>
-        <span className="text-sm font-bold tracking-wide text-foreground">VV: ULTIMATUM</span>
+        <span className="grid h-9 w-9 place-items-center overflow-hidden rounded-xl border border-border bg-muted p-1">
+          <img src="/android-chrome-192x192.png" alt="Anime Vanguards Wiki icon" className="size-full object-contain" />
+        </span>
+        <span className="text-sm font-bold tracking-wide text-foreground">Anime Vanguards</span>
       </Link>
       <nav className="hidden items-center gap-1 md:flex">
         {NAVIGATION_CONFIG.map((item) => (
@@ -64,7 +66,7 @@ export async function WikiSidebar({ locale, navGroups, currentPath }: { locale: 
 export async function SiteFooter({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: "footer" });
   const site = await getTranslations({ locale, namespace: "site" });
-  return <footer className="mt-16 border-t border-border bg-card/30"><div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"><div className="mb-10 rounded-2xl border border-border bg-muted/40 p-5"><div className="font-bold text-foreground">VV Ultimatum</div><p className="mt-1 text-sm text-muted-foreground">{t("description")}</p><Link href="https://www.roblox.com/games/6270290407/VV-ULTIMATUM" className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[hsl(var(--nav-theme))]">{t("quickLinks")} <ExternalLink className="h-4 w-4" /></Link></div><p className="mb-8 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">{site("legalNotice")}</p><div className="grid gap-8 md:grid-cols-4"><div className="md:col-span-2"><h3 className="font-bold text-foreground">{t("aboutTitle")}</h3><p className="mt-3 max-w-xl text-sm leading-7 text-muted-foreground">{t("about")}</p></div><FooterList title={t("quickLinks")} links={[[t("playGame"), "https://www.roblox.com/games/6270290407/VV-ULTIMATUM"], [t("officialDiscord"), "https://discord.gg/vvgame"], [t("officialYoutube"), "https://www.youtube.com/@vvrobloxgame"], [t("vvBuilder"), "https://www.vvbuilder.online/"]]} /><FooterList title={t("guides")} links={[[t("beginnerGuide"), "/beginner-guide"], [t("raceGuides"), "/races"], [t("bossGuides"), "/bosses"], [t("buildGuide"), "/builds"], [t("privacyPolicy"), "/privacy-policy"], [t("termsOfService"), "/terms-of-service"]]} /></div><p className="mt-10 border-t border-border pt-6 text-xs text-muted-foreground">{t("copyright")}</p></div></footer>;
+  return <footer className="mt-16 border-t border-border bg-card/30"><div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8"><div className="mb-10 rounded-2xl border border-border bg-muted/40 p-5"><div className="font-bold text-foreground">Anime Vanguards Wiki</div><p className="mt-1 text-sm text-muted-foreground">{t("description")}</p><Link href="https://www.roblox.com/games/16146832113/Anime-Vanguards-Eternal-Adversaries" className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[hsl(var(--nav-theme))]">{t("quickLinks")} <ExternalLink className="h-4 w-4" /></Link></div><p className="mb-8 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">{site("legalNotice")}</p><div className="grid gap-8 md:grid-cols-4"><div className="md:col-span-2"><h3 className="font-bold text-foreground">{t("aboutTitle")}</h3><p className="mt-3 max-w-xl text-sm leading-7 text-muted-foreground">{t("about")}</p></div><FooterList title={t("quickLinks")} links={[[t("playGame"), "https://www.roblox.com/games/16146832113/Anime-Vanguards-Eternal-Adversaries"], [t("officialDiscord"), "https://discord.com/invite/animevanguards"], [t("officialYoutube"), "https://www.youtube.com/@animevanguardsofficial"], ["Official Site", "https://vanguards.gg/"]]} /><FooterList title={t("guides")} links={[[t("beginnerGuide"), "/beginner-guide"], [t("raceGuides"), "/races"], [t("bossGuides"), "/bosses"], [t("buildGuide"), "/builds"], [t("privacyPolicy"), "/privacy-policy"], [t("termsOfService"), "/terms-of-service"]]} /></div><p className="mt-10 border-t border-border pt-6 text-xs text-muted-foreground">{t("copyright")}</p></div></footer>;
 }
 
 function FooterList({ title, links }: { title: string; links: string[][] }) { return <div><h4 className="font-semibold text-foreground">{title}</h4><ul className="mt-3 space-y-2 text-sm text-muted-foreground">{links.map(([label, href]) => <li key={href}><Link className="hover:text-foreground" href={href}>{label}</Link></li>)}</ul></div>; }
@@ -73,7 +75,7 @@ export function TrailerCard({ videoId }: { videoId: string }) {
   return (
     <div className="group relative cursor-pointer overflow-hidden rounded-2xl border border-border shadow-lg transition-all duration-200">
       <div className="relative aspect-video w-full">
-        <img src="/images/hero-trailer-thumbnail.jpg" alt="VV: ULTIMATUM Official Trailer" className="size-full object-cover transition-all duration-200 group-hover:brightness-80" />
+        <img src="/images/hero.webp" alt="Anime Vanguards Official Trailer" className="size-full object-cover transition-all duration-200 group-hover:brightness-80" />
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="flex size-20 items-center justify-center rounded-full bg-primary/10 backdrop-blur-md transition-transform duration-200 group-hover:scale-105 sm:size-24">
@@ -88,11 +90,20 @@ export function TrailerCard({ videoId }: { videoId: string }) {
 }
 
 export function TrailerDialog({ videoId }: { videoId: string }) {
+  const closeTrailer = () => {
+    const dialog = document.getElementById("trailer-dialog") as HTMLDialogElement | null;
+    const iframe = document.getElementById("trailer-iframe") as HTMLIFrameElement | null;
+    if (iframe) iframe.src = "";
+    if (dialog?.open) dialog.close();
+    dialog?.classList.add("opacity-0", "pointer-events-none");
+    dialog?.classList.remove("opacity-100", "pointer-events-auto");
+  };
+
   return (
-    <dialog id="trailer-dialog" className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200" onClick={(e) => { const d = document.getElementById("trailer-dialog") as HTMLDialogElement; if (e.target === d) { d.close(); d.classList.add("opacity-0", "pointer-events-none"); d.classList.remove("opacity-100", "pointer-events-auto"); } }}>
+    <dialog id="trailer-dialog" className="fixed inset-0 z-[100] m-0 flex h-screen max-h-none w-screen max-w-none items-center justify-center border-0 bg-black/80 p-0 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200" onCancel={(e) => { e.preventDefault(); closeTrailer(); }} onClick={(e) => { if (e.target === e.currentTarget) closeTrailer(); }}>
       <div className="relative w-full max-w-4xl mx-4">
         <iframe id="trailer-iframe" className="aspect-video w-full rounded-xl" allow="autoplay; encrypted-media" allowFullScreen />
-        <button className="absolute -top-10 right-0 text-white/80 hover:text-white text-sm font-medium" onClick={() => { const d = document.getElementById("trailer-dialog") as HTMLDialogElement; d.close(); d.classList.add("opacity-0", "pointer-events-none"); d.classList.remove("opacity-100", "pointer-events-auto"); }}>✕ Close</button>
+        <button type="button" className="absolute right-3 top-3 z-10 rounded-md bg-black/70 px-2.5 py-1 text-sm font-medium text-white/90 backdrop-blur-sm hover:text-white" onClick={closeTrailer}>✕ Close</button>
       </div>
     </dialog>
   );
