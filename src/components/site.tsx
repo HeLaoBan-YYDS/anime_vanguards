@@ -17,7 +17,6 @@ const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@animevanguardsofficial";
 const ROBLOX_GROUP_URL = "https://www.roblox.com/communities/17219742/Kitawari";
 
 export function localizeHref(href: string, locale: string) {
-  if (locale === "en") return href;
   return `/${locale}${href === "/" ? "" : href}`;
 }
 

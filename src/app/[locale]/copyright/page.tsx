@@ -1,11 +1,48 @@
+import type { Metadata } from "next";
+import { getMessages } from "next-intl/server";
 import { LegalPage } from "@/components/legal-page";
+import { routing } from "@/i18n/routing";
+import en from "@/locales/en.json";
 
-export default function CopyrightPage() {
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://anime-vanguards-wiki.wiki";
+type Messages = typeof en;
+
+function localizedPath(locale: string, pathname: string) {
+  return `/${locale}${pathname}`;
+}
+
+function languageAlternates(pathname: string) {
+  return {
+    "x-default": localizedPath(routing.defaultLocale, pathname),
+    ...Object.fromEntries(routing.locales.map((locale) => [locale, localizedPath(locale, pathname)])),
+  };
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const messages = (await getMessages({ locale })) as Messages;
+  const title = `${messages.legal.copyright.title} - ${messages.site.name}`;
+  const description = messages.legal.copyright.description;
+  const pathname = "/copyright";
+  return {
+    title,
+    description,
+    alternates: { canonical: localizedPath(locale, pathname), languages: languageAlternates(pathname) },
+    openGraph: { title, description, url: `${siteUrl}${localizedPath(locale, pathname)}`, siteName: messages.site.name },
+    twitter: { card: "summary", title, description },
+  };
+}
+
+export default async function CopyrightPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const messages = (await getMessages({ locale })) as Messages;
+  const { title, content } = messages.legal.copyright;
+
   return (
-    <LegalPage title="Copyright">
-      <p>Anime Vanguards, Roblox, Kitawari branding, logos, game media, and related materials belong to their respective owners.</p>
-      <p>This site is a non-official fan wiki implementation for educational, reference, and guide presentation purposes.</p>
-      <p>If you own rights to content displayed here and have a concern, please contact the site operator for review.</p>
+    <LegalPage title={title}>
+      {content.map((paragraph, idx) => (
+        <p key={idx}>{paragraph}</p>
+      ))}
     </LegalPage>
   );
 }

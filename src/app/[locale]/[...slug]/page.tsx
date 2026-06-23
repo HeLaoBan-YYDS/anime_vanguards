@@ -17,7 +17,7 @@ const defaultImage = "/images/hero.webp";
 type Messages = typeof en;
 
 function localizedPath(locale: Locale | string, pathname: string) {
-  return locale === routing.defaultLocale ? pathname : `/${locale}${pathname === "/" ? "" : pathname}`;
+  return `/${locale}${pathname === "/" ? "" : pathname}`;
 }
 
 function languageAlternates(pathname: string) {

@@ -451,6 +451,43 @@
     "overviewTitle": "Anime Vanguards Community",
     "overviewDescription": "Follow Anime Vanguards community resources, Discord coverage, and discussion around major game moments."
   },
+  "legal": {
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "description": "Privacy Policy for Anime Vanguards Wiki — how we handle visitor data and privacy on this fan-made guide hub.",
+      "content": [
+        "This fan wiki provides informational game guides for Anime Vanguards on Roblox. We do not request account credentials, Roblox passwords, Discord credentials, or private payment information.",
+        "Basic analytics, advertising, and hosting providers may process standard technical information such as device type, browser, approximate region, and visited pages.",
+        "External links may lead to Roblox, Discord, YouTube, the official Anime Vanguards website, or the Kitawari Roblox group. Those services are governed by their own privacy policies."
+      ]
+    },
+    "about": {
+      "title": "About",
+      "description": "About Anime Vanguards Wiki — an independent fan-built guide hub for Roblox players covering codes, units, traits, and progression.",
+      "content": [
+        "Anime Vanguards Wiki is an independent fan-built guide hub for Roblox players covering codes, units, traits, evolutions, farming, update notes, and beginner progression.",
+        "The site links players to official Anime Vanguards destinations including Roblox, Discord, YouTube, vanguards.gg, and the Kitawari Roblox group while keeping guide content separate from official channels."
+      ]
+    },
+    "termsOfService": {
+      "title": "Terms of Service",
+      "description": "Terms of Service for Anime Vanguards Wiki — usage terms for this independent fan-made guide hub.",
+      "content": [
+        "This site is an independent fan-made guide hub. Content is provided for informational and entertainment purposes only.",
+        "Game systems, codes, drops, and update details may change without notice. Always verify important information in-game or through official channels.",
+        "By using this site, you agree not to misuse it, attempt unauthorized access, or present this fan wiki as an official Kitawari, Roblox, or Anime Vanguards property."
+      ]
+    },
+    "copyright": {
+      "title": "Copyright",
+      "description": "Copyright information for Anime Vanguards Wiki — ownership and takedown details.",
+      "content": [
+        "Anime Vanguards, Roblox, Kitawari branding, logos, game media, and related materials belong to their respective owners.",
+        "This site is a non-official fan wiki implementation for educational, reference, and guide presentation purposes.",
+        "If you own rights to content displayed here and have a concern, please contact the site operator for review."
+      ]
+    }
+  },
   "shared": {
     "menu": "Menu",
     "toggleTheme": "Toggle theme",

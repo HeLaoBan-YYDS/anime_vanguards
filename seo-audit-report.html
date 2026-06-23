@@ -227,6 +227,7 @@
     <div class="meta">
       <span class="pill">目标：http://localhost:3000/</span>
       <span class="pill">审计日期：2026-06-23</span>
+      <span class="pill">高优先级修复状态：已完成（2026-06-23）</span>
       <span class="pill">站点类型：多语言 Roblox 游戏 Wiki / 攻略内容站</span>
       <span class="pill">审计语言：中文</span>
     </div>
@@ -236,8 +237,8 @@
     <h2>执行摘要</h2>
     <p>整体来看，站点已经具备较好的 SEO 基础：robots 和 sitemap 可访问，sitemap 输出了 hreflang alternate，主要内容页有 canonical、Article/BreadcrumbList JSON-LD、清晰 H1 和充足正文。最需要优先处理的是多语言根路径的稳定性、静态法务页的语言/metadata 问题、移动端横向溢出，以及英文文章标题过长。</p>
     <ul class="summary-list">
-      <li><strong>最高优先级：</strong>关闭或重构根路径自动语言检测，避免 <code>/</code> 因 <code>Accept-Language</code> 或 <code>NEXT_LOCALE</code> 变化而跳转/改 canonical。</li>
-      <li><strong>第二优先级：</strong>修复 <code>/ja/about</code>、<code>/es/privacy-policy</code> 等静态页正文仍为英文、且缺少页面级 canonical/hreflang 的问题。</li>
+      <li><strong>最高优先级：</strong><span class="tag good">已完成</span>根路径已固定为显式默认语言入口 <code>/en</code>，不再因 <code>Accept-Language</code> 或 <code>NEXT_LOCALE</code> 改变目标语言。</li>
+      <li><strong>第二优先级：</strong><span class="tag good">已完成</span><code>/ja/about</code>、<code>/es/privacy-policy</code> 等静态页已接入本地化正文与页面级 canonical/hreflang metadata。</li>
       <li><strong>快速收益：</strong>收短文章 SEO title，修复首页移动端横向溢出，减少首页一次性渲染的文章卡片数量。</li>
     </ul>
   </section>
@@ -323,9 +324,10 @@
   <h2>优先级问题</h2>
   <div class="findings">
     <article class="finding high">
-      <h3><span class="tag high">高</span>根路径会按语言请求头或 cookie 改变目标语言和 canonical</h3>
+      <h3><span class="tag high">高</span><span class="tag good">已完成</span>根路径会按语言请求头或 cookie 改变目标语言和 canonical</h3>
       <p><strong>影响：</strong><code>/</code> 同时被 sitemap 标为 x-default 和 en，但请求 <code>Accept-Language: ja</code> 会 307 到 <code>/ja</code>，请求 <code>Accept-Language: es</code> 会 307 到 <code>/es</code>，带 <code>Cookie: NEXT_LOCALE=ja</code> 也会 307 到 <code>/ja</code>。这会让搜索引擎看到不稳定的根 URL，削弱 x-default/default locale 信号，增加重复与错语种索引风险。</p>
       <p class="evidence">证据：<code>src/i18n/routing.ts:15-16</code> 使用 <code>localePrefix: "as-needed"</code> 且 <code>localeDetection: true</code>；<code>src/app/sitemap.ts:17</code> 将 x-default 指向默认语言根 URL。</p>
+      <p class="evidence">完成验证：当前策略已改为显式 locale URL，<code>/</code> 在 <code>Accept-Language: ja</code>、<code>Accept-Language: es</code>、<code>Cookie: NEXT_LOCALE=ja</code> 三种场景下均跳转到 <code>/en</code>；<code>/en</code> 输出自引用 canonical、完整 hreflang 与 <code>x-default</code>；<code>sitemap.xml</code> 首个 <code>&lt;loc&gt;</code> 为 <code>https://anime-vanguards-wiki.wiki/en</code>，且不再包含裸根 URL。</p>
       <ul class="action-list">
         <li>建议将 <code>localeDetection</code> 改为 <code>false</code>，让 <code>/</code> 永远稳定服务英文默认页，语言切换只通过显式链接和 cookie 用于 UI。</li>
         <li>如果需要 x-default 语言选择页，则让 <code>/</code> 成为中立选择页，并把英文改为显式 <code>/en</code>，避免 <code>/</code> 同时承担英文页和语言检测入口。</li>
@@ -334,9 +336,10 @@
     </article>
 
     <article class="finding high">
-      <h3><span class="tag high">高</span>多语言静态法务/关于页面内容未本地化，且缺少页面级 metadata</h3>
+      <h3><span class="tag high">高</span><span class="tag good">已完成</span>多语言静态法务/关于页面内容未本地化，且缺少页面级 metadata</h3>
       <p><strong>影响：</strong><code>/ja/privacy-policy</code> 的 HTML <code>lang="ja"</code>，但 H1 是英文 “Privacy Policy”，正文也是英文；<code>/es/about</code> 同样是西班牙语页面框架加英文正文。这些 URL 被 sitemap 收录，会造成语言不匹配、低价值本地化页和错误摘要。</p>
       <p class="evidence">证据：<code>src/app/[locale]/privacy-policy/page.tsx:5-8</code>、<code>src/app/[locale]/about/page.tsx:5-7</code>、<code>src/app/[locale]/terms-of-service/page.tsx:5-8</code> 均硬编码英文内容；<code>src/app/sitemap.ts:26</code> 把 <code>/privacy-policy</code>、<code>/terms-of-service</code>、<code>/copyright</code>、<code>/about</code> 放入所有语言 sitemap；<code>src/app/[locale]/layout.tsx:26-39</code> 提供的是站点级默认 metadata，静态页未覆盖 canonical/hreflang。</p>
+      <p class="evidence">完成验证：已逐页验证 en、pt-br、es、ja 四种语言下的 <code>/about</code>、<code>/privacy-policy</code>、<code>/terms-of-service</code>、<code>/copyright</code> 共 16 个 URL，全部返回 200；HTML <code>lang</code>、title、description、H1、canonical、hreflang 与 <code>x-default</code> 均与对应 locale 一致。</p>
       <ul class="action-list">
         <li>为这些页面接入 locale messages，至少本地化 H1、正文、title、description。</li>
         <li>为每个静态页添加 <code>generateMetadata</code>，输出 page-specific title、description、canonical、languages。</li>
@@ -432,14 +435,14 @@
       <th>预期收益</th>
     </tr>
     <tr>
-      <td>P0</td>
-      <td>决定国际化 URL 策略：稳定 <code>/</code> 为英文，或改为独立 x-default 语言入口；关闭自动语言检测或避免根路径按请求头跳转。</td>
-      <td>降低错语种索引与 canonical/hreflang 冲突风险。</td>
+      <td>P0 <span class="tag good">已完成</span></td>
+      <td>已决定并落地国际化 URL 策略：使用显式 locale URL，根路径稳定跳转到 <code>/en</code>；关闭自动语言检测对根路径目标语言的影响。</td>
+      <td>已通过复测，降低错语种索引与 canonical/hreflang 冲突风险。</td>
     </tr>
     <tr>
-      <td>P0</td>
-      <td>处理多语言静态法务页：翻译并添加 metadata，或暂时从非英文 sitemap 移除/noindex。</td>
-      <td>修复 lang 与正文不匹配，减少低质量 locale 页面。</td>
+      <td>P0 <span class="tag good">已完成</span></td>
+      <td>已处理多语言静态法务/关于页：本地化正文并添加页面级 metadata、canonical 与 hreflang。</td>
+      <td>已通过 16 个 locale 静态页复测，修复 lang 与正文不匹配问题。</td>
     </tr>
     <tr>
       <td>P1</td>

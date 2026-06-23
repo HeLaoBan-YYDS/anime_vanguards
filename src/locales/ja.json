@@ -451,6 +451,43 @@
     "overviewTitle": "Anime Vanguardsコミュニティ",
     "overviewDescription": "Anime Vanguardsのコミュニティリソース、Discord情報、大きな話題に関する議論を追えます。"
   },
+  "legal": {
+    "privacyPolicy": {
+      "title": "プライバシーポリシー",
+      "description": "Anime Vanguards 攻略Wikiのプライバシーポリシー — このファンメイドガイドハブでの訪問者データとプライバシーの取り扱いについて。",
+      "content": [
+        "このファンWikiは、RobloxのAnime Vanguardsに関する情報ガイドを提供しています。アカウント情報、Robloxパスワード、Discord認証情報、個人の支払い情報を要求することは一切ありません。",
+        "基本的な分析、広告、ホスティングプロバイダーは、デバイスの種類、ブラウザ、おおよその地域、訪問ページなどの標準的な技術情報を処理する場合があります。",
+        "外部リンクは、Roblox、Discord、YouTube、Anime Vanguards公式サイト、またはKitawari Robloxグループにつながる場合があります。これらのサービスは、それぞれ独自のプライバシーポリシーに準拠しています。"
+      ]
+    },
+    "about": {
+      "title": "このサイトについて",
+      "description": "Anime Vanguards 攻略Wikiについて — コード、ユニット、traits、進行をカバーするRobloxプレイヤー向けの独立したファン制作ガイドハブ。",
+      "content": [
+        "Anime Vanguards 攻略Wikiは、コード、ユニット、traits、進化、周回、アップデート情報、初心者進行をカバーするRobloxプレイヤー向けの独立したファン制作ガイドハブです。",
+        "このサイトは、プレイヤーをRoblox、Discord、YouTube、vanguards.gg、Kitawari RobloxグループなどのAnime Vanguards公式情報へリンクしつつ、ガイドコンテンツを公式チャンネルとは切り離して提供しています。"
+      ]
+    },
+    "termsOfService": {
+      "title": "利用規約",
+      "description": "Anime Vanguards 攻略Wikiの利用規約 — この独立したファンメイドガイドハブの利用条件。",
+      "content": [
+        "このサイトは独立したファンメイドのガイドハブです。コンテンツは情報提供およびエンターテイメント目的でのみ提供されています。",
+        "ゲームシステム、コード、ドロップ、アップデートの詳細は予告なく変更される場合があります。重要な情報は必ずゲーム内または公式チャンネルで確認してください。",
+        "このサイトを利用することにより、不正使用、不正アクセスの試み、このファンWikiをKitawari、Roblox、またはAnime Vanguardsの公式財産として偽装しないことに同意したものとみなします。"
+      ]
+    },
+    "copyright": {
+      "title": "著作権",
+      "description": "Anime Vanguards 攻略Wikiの著作権情報 — 所有権と削除に関する詳細。",
+      "content": [
+        "Anime Vanguards、Roblox、Kitawariのブランド、ロゴ、ゲームメディア、および関連素材は、それぞれの権利所有者に帰属します。",
+        "このサイトは、教育、参照、ガイド提示を目的とした非公式のファンWiki実装です。",
+        "ここに表示されているコンテンツの権利をお持ちで、懸念がある場合は、確認のためサイト運営者までご連絡ください。"
+      ]
+    }
+  },
   "shared": {
     "menu": "メニュー",
     "toggleTheme": "テーマを切り替え",

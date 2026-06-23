@@ -18,11 +18,6 @@ const LOCALE_LABELS: Record<Locale, string> = {
   ja: "日本語",
 };
 
-/**
- * 语言切换器（下拉菜单版）：点击 Globe 图标展开所有语言列表
- * 当前语言显示 ✓ 标记，选择后跳转对应语言路径
- * 支持 2+ 个语言，扩展时只需在 routing.ts 添加 locale 即可
- */
 export function LanguageSwitcher({ locale }: { locale: string }) {
   const pathname = usePathname();
   const router = useRouter();
@@ -33,21 +28,16 @@ export function LanguageSwitcher({ locale }: { locale: string }) {
   const handleSwitch = (nextLocale: Locale) => {
     if (nextLocale === locale) return;
 
-    let newPath = pathname;
-
-    // 移除当前 locale 前缀（如果有）
-    if (locale !== routing.defaultLocale) {
-      newPath = newPath.replace(`/${locale}`, "") || "/";
+    let pathWithoutLocale = pathname || "/";
+    for (const loc of routing.locales) {
+      if (pathWithoutLocale === `/${loc}` || pathWithoutLocale.startsWith(`/${loc}/`)) {
+        pathWithoutLocale = pathWithoutLocale.slice(`/${loc}`.length) || "/";
+        break;
+      }
     }
 
-    // 添加新 locale 前缀（如果不是默认语言）
-    if (nextLocale !== routing.defaultLocale) {
-      newPath = `/${nextLocale}${newPath === "/" ? "" : newPath}`;
-    }
-
-    // 设置 NEXT_LOCALE cookie，防止 middleware 重定向回原语言
+    const newPath = `/${nextLocale}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`;
     document.cookie = `NEXT_LOCALE=${nextLocale};path=/;max-age=${60 * 60 * 24 * 365};SameSite=Lax`;
-
     router.push(newPath);
   };
 

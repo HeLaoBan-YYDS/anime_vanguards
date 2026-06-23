@@ -11,7 +11,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://anime-vanguards-wik
 type Messages = typeof en;
 
 function localizedPath(locale: string, pathname: string) {
-  return locale === routing.defaultLocale ? pathname : `/${locale}${pathname === "/" ? "" : pathname}`;
+  return `/${locale}${pathname === "/" ? "" : pathname}`;
 }
 
 function localizedUrl(locale: string, pathname: string) {

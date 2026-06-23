@@ -11,9 +11,9 @@ import { defineRouting } from "next-intl/routing";
 export const routing = defineRouting({
   locales: ["en", "pt-br", "es", "ja"],
   defaultLocale: "en",
-  // English is served without a `/en` prefix (e.g. `/guide`, `/guide/anime-vanguards-beginner-guide`).
-  localePrefix: "as-needed",
-  localeDetection: true,
+  // Every locale uses an explicit prefix so `/` is a stable fallback redirect to `/en`.
+  localePrefix: "always",
+  localeDetection: false,
 });
 
 export type Locale = (typeof routing.locales)[number];

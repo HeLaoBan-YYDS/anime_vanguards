@@ -4,7 +4,7 @@ import { CONTENT_TYPES } from "@/config/navigation";
 import { routing } from "@/i18n/routing";
 
 function localizedPath(locale: string, pathname: string) {
-  return locale === routing.defaultLocale ? pathname : `/${locale}${pathname === "/" ? "" : pathname}`;
+  return `/${locale}${pathname === "/" ? "" : pathname}`;
 }
 
 function absoluteUrl(siteUrl: string, locale: string, pathname: string) {

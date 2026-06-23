@@ -451,6 +451,43 @@
     "overviewTitle": "Comunidade de Anime Vanguards",
     "overviewDescription": "Acompanhe recursos da comunidade de Anime Vanguards, cobertura do Discord e discussões sobre grandes momentos do jogo."
   },
+  "legal": {
+    "privacyPolicy": {
+      "title": "Política de privacidade",
+      "description": "Política de privacidade da Wiki de Anime Vanguards — como lidamos com dados e privacidade dos visitantes neste hub de guias feito por fãs.",
+      "content": [
+        "Esta wiki de fãs fornece guias informativos sobre Anime Vanguards no Roblox. Não solicitamos credenciais de conta, senhas do Roblox, credenciais do Discord ou informações de pagamento privadas.",
+        "Provedores básicos de análise, publicidade e hospedagem podem processar informações técnicas padrão, como tipo de dispositivo, navegador, região aproximada e páginas visitadas.",
+        "Links externos podem levar ao Roblox, Discord, YouTube, site oficial de Anime Vanguards ou grupo Roblox da Kitawari. Esses serviços são regidos por suas próprias políticas de privacidade."
+      ]
+    },
+    "about": {
+      "title": "Sobre",
+      "description": "Sobre a Wiki de Anime Vanguards — um hub de guias independente feito por fãs para jogadores de Roblox, cobrindo códigos, unidades, traits e progressão.",
+      "content": [
+        "A Wiki de Anime Vanguards é um hub de guias independente feito por fãs para jogadores de Roblox, cobrindo códigos, unidades, traits, evoluções, farm, notas de atualização e progressão para iniciantes.",
+        "O site conecta jogadores a destinos oficiais de Anime Vanguards, incluindo Roblox, Discord, YouTube, vanguards.gg e o grupo Roblox da Kitawari, mantendo o conteúdo de guias separado dos canais oficiais."
+      ]
+    },
+    "termsOfService": {
+      "title": "Termos de serviço",
+      "description": "Termos de serviço da Wiki de Anime Vanguards — condições de uso deste hub de guias independente feito por fãs.",
+      "content": [
+        "Este site é um hub de guias independente feito por fãs. O conteúdo é fornecido apenas para fins informativos e de entretenimento.",
+        "Sistemas do jogo, códigos, drops e detalhes de atualizações podem mudar sem aviso prévio. Sempre verifique informações importantes dentro do jogo ou pelos canais oficiais.",
+        "Ao usar este site, você concorda em não fazer uso indevido, não tentar acesso não autorizado e não apresentar esta wiki de fãs como propriedade oficial da Kitawari, Roblox ou Anime Vanguards."
+      ]
+    },
+    "copyright": {
+      "title": "Direitos autorais",
+      "description": "Informações de direitos autorais da Wiki de Anime Vanguards — propriedade e detalhes de remoção.",
+      "content": [
+        "Anime Vanguards, Roblox, marca Kitawari, logotipos, mídia do jogo e materiais relacionados pertencem aos seus respectivos proprietários.",
+        "Este site é uma implementação de wiki de fãs não oficial para fins educacionais, de referência e apresentação de guias.",
+        "Se você possui direitos sobre o conteúdo exibido aqui e tem alguma preocupação, entre em contato com o operador do site para análise."
+      ]
+    }
+  },
   "shared": {
     "menu": "Menu",
     "toggleTheme": "Alternar tema",

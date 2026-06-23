@@ -1,11 +1,48 @@
+import type { Metadata } from "next";
+import { getMessages } from "next-intl/server";
 import { LegalPage } from "@/components/legal-page";
+import { routing } from "@/i18n/routing";
+import en from "@/locales/en.json";
 
-export default function TermsOfServicePage() {
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://anime-vanguards-wiki.wiki";
+type Messages = typeof en;
+
+function localizedPath(locale: string, pathname: string) {
+  return `/${locale}${pathname}`;
+}
+
+function languageAlternates(pathname: string) {
+  return {
+    "x-default": localizedPath(routing.defaultLocale, pathname),
+    ...Object.fromEntries(routing.locales.map((locale) => [locale, localizedPath(locale, pathname)])),
+  };
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const messages = (await getMessages({ locale })) as Messages;
+  const title = `${messages.legal.termsOfService.title} - ${messages.site.name}`;
+  const description = messages.legal.termsOfService.description;
+  const pathname = "/terms-of-service";
+  return {
+    title,
+    description,
+    alternates: { canonical: localizedPath(locale, pathname), languages: languageAlternates(pathname) },
+    openGraph: { title, description, url: `${siteUrl}${localizedPath(locale, pathname)}`, siteName: messages.site.name },
+    twitter: { card: "summary", title, description },
+  };
+}
+
+export default async function TermsOfServicePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const messages = (await getMessages({ locale })) as Messages;
+  const { title, content } = messages.legal.termsOfService;
+
   return (
-    <LegalPage title="Terms of Service">
-      <p>This site is an independent fan-made guide hub. Content is provided for informational and entertainment purposes only.</p>
-      <p>Game systems, codes, drops, and update details may change without notice. Always verify important information in-game or through official channels.</p>
-      <p>By using this site, you agree not to misuse it, attempt unauthorized access, or present this fan wiki as an official Kitawari, Roblox, or Anime Vanguards property.</p>
+    <LegalPage title={title}>
+      {content.map((paragraph, idx) => (
+        <p key={idx}>{paragraph}</p>
+      ))}
     </LegalPage>
   );
 }
