@@ -9,8 +9,8 @@
   "nav": {},
   "home": {
     "meta": {
-      "title": "VV: ULTIMATUM — Codes, Builds, Guides | VV Ultimatum Wiki",
-      "description": "Complete VV: ULTIMATUM wiki with active codes, boss strategies, race guides, build optimization, and progression walkthroughs for Shinigami, Quincy, and Hollow."
+      "title": "Anime Vanguards Wiki - Codes, Units & Guide",
+      "description": "Guides for Anime Vanguards on Roblox: beginner progression, units, traits, evolutions, farming routes, banners, update notes, and code tracking."
     },
     "hero": {
       "eyebrow": "Fan-Made Community Wiki",
@@ -35,27 +35,27 @@
     },
     "start": {
       "eyebrow": "Start Here",
-      "title": "Your VV Ultimatum Journey",
+      "title": "Your Anime Vanguards Journey",
       "cards": [
         {
           "number": "1",
           "title": "Beginner Guide",
-          "description": "Master the Spirit World from day one with our comprehensive beginner guide covering controls, combat, and early progression."
+          "description": "Learn the core loop, where to spend your first resources, and how to avoid early progression mistakes."
         },
         {
           "number": "2",
-          "title": "Fastest Leveling",
-          "description": "Dominate early game and max your progression with the most efficient leveling routes and strategies."
+          "title": "Farm Gems, Gold & Rerolls",
+          "description": "The fastest routes for early currency, banner pulls, and reroll efficiency during your first hours."
         },
         {
           "number": "3",
-          "title": "Best Farming Spots",
-          "description": "Maximize your Soul Essence and EXP gains with optimal farming locations for every stage."
+          "title": "Best Units & Team Building",
+          "description": "Find strong beginner-safe picks, banner priorities, and role balance for story, challenges, and farming."
         },
         {
           "number": "4",
-          "title": "How to Extract",
-          "description": "Learn the best methods and locations for extracting resources in VV Ultimatum."
+          "title": "Evolutions, Traits & Endgame",
+          "description": "Understand trait value, upgrade timing, evolution goals, and how to scale into the late-game meta."
         }
       ]
     },
@@ -63,78 +63,78 @@
       "eyebrow": "Popular Pages",
       "title": "Trending Now",
       "quickLinks": [
-        "Hollow Progression",
-        "Fastest Leveling",
-        "Spirit Charms",
-        "All Boss Guides"
+        "Active Codes",
+        "Best Units",
+        "Trait Rerolls",
+        "Evolutions"
       ],
       "cards": [
         {
           "badge": "Beginner",
           "title": "Beginner Guide",
-          "description": "Everything you need from your first login to mastering the basics of combat and progression.",
+          "description": "Start Anime Vanguards with the core loop, first summons, upgrade priorities, and early resource choices.",
           "href": "/beginner-guide"
         },
         {
           "badge": "Updated",
           "title": "Active Codes",
-          "description": "All working codes with rewards redeem before they expire.",
+          "description": "Working Anime Vanguards codes with rewards, status notes, and redemption steps.",
           "href": "/codes"
         },
         {
           "badge": "Updated",
-          "title": "Equipment Database",
-          "description": "94 items across 5 slots complete gear database with stats, rarity, and sources.",
-          "href": "/equipment"
+          "title": "Tier List",
+          "description": "Compare the best units for summons, evolutions, story clears, farming, and harder modes.",
+          "href": "/tier-list"
         },
         {
           "badge": "Popular",
-          "title": "Which Race Should You Pick?",
-          "description": "Shinigami, Quincy, or Hollow compare all three and find your perfect playstyle.",
-          "href": "/races/best-race"
+          "title": "Units Guide",
+          "description": "Learn starter choices, summon priorities, rare drops, and units worth long-term investment.",
+          "href": "/units"
         },
         {
           "badge": "New",
-          "title": "Enemies & Monsters",
-          "description": "23 enemy types across 5 regions drops, locations, and farming tips.",
-          "href": "/enemies"
+          "title": "Traits Guide",
+          "description": "Review rare traits, reroll value, and the bonuses that matter most for stronger teams.",
+          "href": "/traits"
         },
         {
           "badge": "Popular",
-          "title": "Boss Locations & Drops",
-          "description": "Every boss location, drop table, and respawn timer in one reference.",
-          "href": "/boss-locations-drops-respawn-times"
+          "title": "Gems Guide",
+          "description": "Find practical Gem farming routes for summons, upgrades, and steady account progression.",
+          "href": "/gems-guide"
         },
         {
           "badge": "Popular",
-          "title": "Best Builds",
-          "description": "Optimal stat allocation, skill tree picks, and Charm combos for every playstyle.",
-          "href": "/builds/best-builds"
+          "title": "Evolution Guide",
+          "description": "Track evolution materials, Gold costs, takedown requirements, and stronger unit forms.",
+          "href": "/evolution-guide"
         },
         {
           "badge": "New",
-          "title": "Shikai Tier List",
-          "description": "All 6 Shinigami Shikai types ranked by PvP and PvE performance.",
-          "href": "/tier-list/shikai"
+          "title": "Update Notes",
+          "description": "Follow major Anime Vanguards updates, new units, trailers, and mode changes.",
+          "href": "/updates"
         },
         {
           "badge": "New",
-          "title": "World Events Guide",
-          "description": "Supply Caches, Raids, and endgame world events with rare rewards.",
-          "href": "/world-events"
+          "title": "Farming Routes",
+          "description": "Plan repeatable activities for Gems, rerolls, materials, and late-game account growth.",
+          "href": "/gems-guide"
         }
       ]
     },
     "aboutGame": {
-      "title": "What is VV: ULTIMATUM?",
+      "title": "What is Anime Vanguards?",
       "paragraphs": [
-        "VV: ULTIMATUM is a stylized fighting RPG on Roblox inspired by the Bleach anime universe. Choose from three playable races Shinigami, Quincy, or Hollow each with unique progression systems, unlockable abilities, and evolution paths. Master over 130 skills as you fight your way to the level 100 cap.",
-        "Whether you're unlocking your first Shikai, evolving from a base Hollow into an Arrancar, or grinding Quincy Lieutenant missions, our wiki covers every system with detailed guides, data tables, and step-by-step walkthroughs."
+        "Anime Vanguards is a Roblox anime tower defense game where players summon units, place them across stages, and build teams around traits, evolutions, and game-mode-specific synergies.",
+        "It blends accessible early progression with a high-ceiling endgame focused on banner management, resource farming, challenge clears, and update-driven meta shifts."
       ],
       "stats": [
         {
           "label": "Developer",
-          "value": "Midnight Continent"
+          "value": "Kitawari"
         },
         {
           "label": "Platform",
@@ -142,249 +142,236 @@
         },
         {
           "label": "Genre",
-          "value": "Fighting RPG"
+          "value": "Anime Tower Defense"
         },
         {
           "label": "Visits",
-          "value": "12.6M+"
+          "value": "1.94B+"
         },
         {
           "label": "Favorites",
-          "value": "243K+"
+          "value": "1.95M+"
         },
         {
-          "label": "Total Skills",
-          "value": "130+"
+          "label": "Peak CCU",
+          "value": "340K"
         },
         {
-          "label": "Level Cap",
-          "value": "100"
+          "label": "Max Lobby Size",
+          "value": "24"
         }
       ],
       "cta": "Explore All Guides"
     },
     "explore": {
-      "title": "VV Ultimatum Homepage Modules Navigation",
-      "description": "Jump straight to the eight homepage sections and scroll to the module you need.",
+      "title": "Anime Vanguards Homepage Modules Navigation",
+      "description": "Jump straight to the eight Anime Vanguards guide sections and open the module you need.",
       "modules": [
         {
           "order": 1,
-          "name": "VV Ultimatum Codes",
-          "description": "Redeem the current VV Ultimatum code before spending rerolls so you can test faction ideas with more room to pivot.",
+          "name": "Anime Vanguards Codes",
+          "description": "Find the latest Anime Vanguards codes for free Trait Rerolls, Memoria Shards, Iced Teas, and other valuable rewards. Check each code's reward and status before visiting the complete redemption guide.",
           "href": "/codes",
           "displayType": "code-cards",
           "highlights": [
             {
-              "label": "day1",
-              "detail": "3× Clan Reroll + Token Booster + Focus Elixir",
+              "label": "13.5",
+              "detail": "Redeem for 50 Trait Rerolls and 5,000 Iced Teas.",
               "badge": "Active"
+            },
+            {
+              "label": "EternalAdversaries",
+              "detail": "Redeem for 50 Memoria Shards and 5,000 Iced Teas.",
+              "badge": "Active"
+            },
+            {
+              "label": "Gambler",
+              "detail": "Redeem for 50 Trait Rerolls, 50 Memoria Shards, and 5 Rainbow Essence Stones.",
+              "badge": "Active"
+            },
+            {
+              "label": "Cog5th",
+              "detail": "This code is no longer available for redemption.",
+              "badge": "Expired"
             }
           ]
         },
         {
           "order": 2,
-          "name": "VV Ultimatum Beginner Guide",
-          "description": "Use the first hour to lock in a faction route, learn the live controls, and push quests instead of burning resources on random rerolls.",
-          "href": "/guide/vv-ultimatum-beginner-guide-2026",
-          "displayType": "step-by-step",
+          "name": "Anime Vanguards Tier List",
+          "description": "Compare the best Anime Vanguards units and identify which characters are worth summoning, evolving, and upgrading. The rankings provide a quick overview of top-tier, reliable, situational, and low-priority units.",
+          "href": "/tier-list",
+          "displayType": "tier-grid",
           "highlights": [
             {
-              "label": "1",
-              "detail": "Choose a faction route before spending rerolls"
+              "label": "S",
+              "detail": "Demon Leader (Control), God (Above Heaven), Song Jinwu and Igros, Gujo (Infinity), Lich King (Ruler), Rogita (Super 4), Ice Queen (Release), and Alocard (Vampire King)."
             },
             {
-              "label": "2",
-              "detail": "Finish the opening path and learn the live controls"
+              "label": "A",
+              "detail": "Deceiver (Monster), Horsegirls (Racers), Igros (Elite Knight), Astolfo (Rider of Black), Ice Manipulator (Admiral), Company Captain (Hybrid), Armored Mage (Requip), Elastic Captain (Pirate), Fastest Shinobi (Flash), Delusional Demon (Blood), Saber (Black Tyrant), and Slime (King)."
             },
             {
-              "label": "3",
-              "detail": "Redeem the launch code once the Shop unlocks"
+              "label": "B",
+              "detail": "Warlord (Of the Sea) and Fallen Angel (Pistols)."
             },
             {
-              "label": "4",
-              "detail": "Push story quests before side grinding"
-            },
-            {
-              "label": "5",
-              "detail": "Start mission systems as soon as they open"
-            },
-            {
-              "label": "6",
-              "detail": "Spend early points around one damage plan"
+              "label": "C",
+              "detail": "Manipulator (Spider), with Gazelle (Zombie) and Leo (Fangs) placed below this tier in the referenced rankings."
             }
           ]
         },
         {
           "order": 3,
-          "name": "VV Ultimatum Official Links",
-          "description": "Verified destinations worth bookmarking for the real game page, community channels, and official video feed.",
-          "href": "/codes",
-          "displayType": "card-list",
+          "name": "Anime Vanguards Beginner Guide",
+          "description": "Follow a practical progression path for starting Anime Vanguards, earning gems, summoning units, and unlocking important upgrade systems. These steps help new players avoid wasting early resources.",
+          "href": "/beginner-guide",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "🎮",
-              "detail": "VV: ULTIMATUM on Roblox"
+              "label": "1",
+              "detail": "Redeem active codes from the Profile and Codes menu to collect free rerolls, shards, and upgrade materials."
             },
             {
-              "label": "💬",
-              "detail": "Official Discord Server"
+              "label": "2",
+              "detail": "Choose your starter unit and visit the Summon Portal in the hub to expand your team. Standard summons cost 50 Gems each."
             },
             {
-              "label": "📺",
-              "detail": "Official YouTube Channel"
+              "label": "3",
+              "detail": "Complete Story stages to unlock more content and earn approximately 80 to 240 Gems per stage."
             },
             {
-              "label": "🐦",
-              "detail": "VV Ultimatum on X"
+              "label": "4",
+              "detail": "Use Mandra for Trait Rerolls and Cyan for stat rerolls when you begin improving your strongest units."
             },
             {
-              "label": "🎵",
-              "detail": "VV Ultimatum on TikTok"
-            },
-            {
-              "label": "👥",
-              "detail": "Roblox Community Group"
+              "label": "5",
+              "detail": "Move into Infinite Mode, raids, quests, and boss bounties after establishing a reliable Story Mode team."
             }
           ]
         },
         {
           "order": 4,
-          "name": "VV Ultimatum Clans Tier List",
-          "description": "Treat Clan Rerolls as route-shaping resources. The best keeps depend on faction identity.",
-          "href": "/tier-list",
-          "displayType": "tier-grid",
+          "name": "Anime Vanguards Traits Guide",
+          "description": "Learn how Anime Vanguards traits improve unit damage, attack speed, range, and overall performance. Compare rare traits and understand which bonuses are worth keeping before spending more Trait Rerolls.",
+          "href": "/traits",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "S",
-              "detail": "Kurosaki · Shihoin · Cifer — Do not reroll"
+              "label": "Monarch",
+              "detail": "Has a 0.1% reroll chance and grants 300% Damage, 10% lower SPA, and 5% additional Range, but limits the unit to one placement."
             },
             {
-              "label": "A",
-              "detail": "Eisenhauer · Ishida · Kamamura · Aaroniero — Keep for build"
+              "label": "Ethereal",
+              "detail": "Has a 0.175% reroll chance and grants 20% Damage, 20% lower SPA, and 5% additional Range."
             },
             {
-              "label": "B",
-              "detail": "Parnkgjas · Hitsugaya · Antenor — Good for leveling"
+              "label": "Deadeye",
+              "detail": "Has a 0.375% reroll chance and grants 45% Critical Chance and 50% Critical Damage."
             },
             {
-              "label": "C",
-              "detail": "Schulte · Madarame · Calius — Reroll when affordable"
+              "label": "Trait Rerolls",
+              "detail": "Traits can be rerolled through Mandra near the Evolve area using Trait Reroll items earned from codes, quests, challenges, and progression rewards."
             }
           ]
         },
         {
           "order": 5,
-          "name": "VV Ultimatum Skill Tree Tier List",
-          "description": "Builds work best when players choose a clear combat core instead of spreading Skill Points across unrelated routes.",
-          "href": "/skills/vv-ultimatum-best-skills-ranked",
-          "displayType": "tier-grid",
+          "name": "Anime Vanguards Units Guide",
+          "description": "Discover how to obtain Anime Vanguards units through starter selections, summons, stage drops, and special banners. The guide also highlights rare characters that require significant farming or summon luck.",
+          "href": "/units",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "S",
-              "detail": "Hakuda (melee combos) · Speed (mobility core)"
+              "label": "Starter Units",
+              "detail": "New players begin by choosing between Ichiga, Roku, and Luffo before building a larger team."
             },
             {
-              "label": "A",
-              "detail": "Quincy (bow pressure) · Strength (heavy hits) · Shinigami (Kido control)"
+              "label": "Summon Portal",
+              "detail": "Standard banner summons cost 50 Gems each and are the main method for obtaining additional units."
             },
             {
-              "label": "B",
-              "detail": "Hollow / Arrancar (Cero burst windows)"
+              "label": "Igros",
+              "detail": "Igros can drop from Act 3 of Dungeon Disaster with a reported drop chance of 0.75%."
             },
             {
-              "label": "Utility",
-              "detail": "Sense (target reading) · Misc (universal combat tools)"
+              "label": "Alocard",
+              "detail": "Alocard is a Secret summon unit associated with an extremely low reported summon chance of 0.004%."
             }
           ]
         },
         {
           "order": 6,
-          "name": "VV Ultimatum Weapons Tier List",
-          "description": "Weapon choices are tied to race. Quincy get the clearest starter list, while Shinigami focus on Zanpakuto growth.",
-          "href": "/tier-list",
-          "displayType": "tier-grid",
+          "name": "Anime Vanguards Gems Guide",
+          "description": "Learn the most useful ways to earn Gems for summons and account progression. Compare repeatable activities, daily rewards, and stage-based farming methods before deciding where to spend your playtime.",
+          "href": "/gems-guide",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "S",
-              "detail": "Sword — Balanced all-rounder, safest Quincy starter"
+              "label": "Story Stages",
+              "detail": "Story progression can award approximately 80 to 240 Gems per completed stage."
             },
             {
-              "label": "A",
-              "detail": "Spear (long reach) · Longsword (safe range)"
+              "label": "Infinite Mode",
+              "detail": "Infinite Mode can generate approximately 1,700 to 2,100 Gems per hour depending on progression speed and team strength."
             },
             {
-              "label": "B",
-              "detail": "Greatsword · Hammer · Club — Heavy or niche pressure"
+              "label": "Boss Bounties",
+              "detail": "Boss bounties can award 500 Gems per completion for up to ten daily completions, totaling as much as 5,000 Gems."
             },
             {
-              "label": "C",
-              "detail": "Rifle · Rapier — Playable but outclassed"
+              "label": "Worldlines",
+              "detail": "Worldlines award 250 Gems for each of the first 50 floors and 150 Gems for each subsequent floor."
             }
           ]
         },
         {
           "order": 7,
-          "name": "VV Ultimatum Hollow Progression Guide",
-          "description": "Hollow progression rewards patience: rushing mask removal too early can leave the final build weaker than necessary.",
-          "href": "/guide/VV-Ultimatum-bleach",
-          "displayType": "step-by-step",
+          "name": "Anime Vanguards Evolution Guide",
+          "description": "Review the materials, currencies, and takedown requirements needed to evolve popular Anime Vanguards units. Evolution can unlock stronger forms, improved abilities, and significantly better late-game performance.",
+          "href": "/evolution-guide",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "1",
-              "detail": "Choose a Hollow Type (Gorilla, Lizard, Turtle, Centipede)"
+              "label": "Gujo Infinity",
+              "detail": "Evolving Gujo into Gujo (Infinity) requires the necessary evolution materials and 15,000 Gold."
             },
             {
-              "label": "2",
-              "detail": "Consume Hollows and collect matching traits"
+              "label": "Igros Elite Knight",
+              "detail": "Requires 30,000 Gold, 32 Green Essence Stones, 10 Red Essence Stones, 12 Blood-Red Armor, 10 Blue Essence Stones, 10 Pink Essence Stones, and 1 Rainbow Essence Stone."
             },
             {
-              "label": "3",
-              "detail": "Advance from base Hollow → Menos → Adjuchas"
+              "label": "Alocard Vampire King",
+              "detail": "Requires 30,000 Gold, 1 Hellsing Arms, 35 Green Essence Stones, 13 Yellow Essence Stones, 13 Purple Essence Stones, 13 Red Essence Stones, and 2 Rainbow Essence Stones."
             },
             {
-              "label": "4",
-              "detail": "Push to Vasto Lorde for the 4-trait ceiling"
-            },
-            {
-              "label": "5",
-              "detail": "Remove mask → Become Arrancar or Vastocar"
-            },
-            {
-              "label": "6",
-              "detail": "Meditate and win the Resurrection Fight"
+              "label": "Tuji Sorcerer Killer",
+              "detail": "Requires 5,000 takedowns, 30,000 Gold, 1 Cursed Worm, 40 Green Essence Stones, 15 Blue Essence Stones, 15 Purple Essence Stones, 15 Red Essence Stones, and 4 Rainbow Essence Stones."
             }
           ]
         },
         {
           "order": 8,
-          "name": "VV Ultimatum Shinigami Progression Guide",
-          "description": "The Shinigami route is built around steady questing, Soul Pager missions, meditation timing, and the eventual Shikai fight.",
-          "href": "/races/vv-ultimatum-shinigami-guide",
-          "displayType": "step-by-step",
+          "name": "Anime Vanguards Updates",
+          "description": "Follow major Anime Vanguards updates, trailers, new units, game modes, and progression systems. This section provides a clear path to detailed update coverage based on official announcements and videos.",
+          "href": "/updates",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "1",
-              "detail": "Run Main Story Quests to unlock the progression loop"
+              "label": "Godly Ascension",
+              "detail": "Update 13.0 introduced six new units, a new Story, a new Rift and Rift unit, a new Battlepass, the Pirate Dynasty game mode, and six new Memorias."
             },
             {
-              "label": "2",
-              "detail": "Unlock Soul Society and buy the Soul Pager"
+              "label": "Gear 5th",
+              "detail": "The official Anime Vanguards account announced Gear 5th alongside the Godly Ascension trailer and update rollout."
             },
             {
-              "label": "3",
-              "detail": "Reach Level 25 and start meditation"
+              "label": "Eternal Adversaries",
+              "detail": "Eternal Adversaries received a dedicated trailer published by the official Anime Vanguards YouTube channel."
             },
             {
-              "label": "4",
-              "detail": "Respond to Spirit Whispers for Shikai EXP"
-            },
-            {
-              "label": "5",
-              "detail": "Solve the Bells Puzzle in the Inner World"
-            },
-            {
-              "label": "6",
-              "detail": "Fight the Shikai NPC and unlock Shikai weapon"
+              "label": "Core Gameplay",
+              "detail": "The official Roblox page describes a gameplay loop centered on summoning units, leveling and evolving them, and completing multiple game modes with friends."
             }
           ]
         }
@@ -392,27 +379,27 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Quick answers to the most common questions about VV: ULTIMATUM.",
+      "description": "Quick answers to the most common questions about Anime Vanguards.",
       "items": [
         {
-          "question": "What is VV: ULTIMATUM?",
-          "answer": "VV: ULTIMATUM is a free-to-play fighting RPG on Roblox based on the Bleach anime. You choose one of three races Shinigami (Soul Reaper), Quincy, or Hollow each with unique progression, combat abilities, and evolution systems. The game features 130+ skills, a level 100 cap, boss fights, and deep build customization."
+          "question": "What is Anime Vanguards?",
+          "answer": "Anime Vanguards is a Roblox anime tower defense game where players summon units, place them on stages, upgrade teams, and clear modes built around traits, evolutions, and resource farming."
         },
         {
-          "question": "Which race should beginners pick?",
-          "answer": "Shinigami is the most straightforward starter race, while Hollow and Quincy offer more specialized progression routes. Compare their abilities before committing."
+          "question": "What should beginners do first in Anime Vanguards?",
+          "answer": "Anime Vanguards beginners should redeem active codes, clear early Story stages, save Gems for useful banners, and focus upgrades on a small team before pushing harder modes."
         },
         {
-          "question": "What is the current level cap?",
-          "answer": "The current level cap is 100, with more than 130 skills available across trees and race progression systems."
+          "question": "Where can I find Anime Vanguards codes?",
+          "answer": "Anime Vanguards codes are tracked on the Codes page with reward details, status notes, and redemption steps so players can check rerolls, shards, Iced Teas, and other rewards quickly."
         },
         {
-          "question": "Where do I find active codes?",
-          "answer": "Use the Codes page for working codes, rewards, expiration notes, and redeem instructions."
+          "question": "Which Anime Vanguards units should I build?",
+          "answer": "Anime Vanguards players should compare the tier list, current banners, evolutions, and available materials before investing heavily in a unit, especially during update-driven meta changes."
         },
         {
-          "question": "Are boss guides updated?",
-          "answer": "Boss pages are organized with spawn notes, attack patterns, strategies, drop tables, and related next steps for progression."
+          "question": "How do traits and evolutions work in Anime Vanguards?",
+          "answer": "Anime Vanguards traits add powerful unit bonuses through rerolls, while evolutions use materials, Gold, and progression requirements to unlock stronger unit forms for later content."
         }
       ]
     },
