@@ -13,6 +13,8 @@ import {
 
 const LOCALE_LABELS: Record<Locale, string> = {
   en: "English",
+  "pt-br": "Português do Brasil",
+  es: "Español",
   ja: "日本語",
 };
 
@@ -57,7 +59,7 @@ export function LanguageSwitcher({ locale }: { locale: string }) {
           <span>{LOCALE_LABELS[locale as Locale]}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="min-w-[140px]">
+      <DropdownMenuContent align="end" className="min-w-[180px]">
         {routing.locales.map((loc) => (
           <DropdownMenuItem
             key={loc}

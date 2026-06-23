@@ -6,7 +6,11 @@
     "description": "Anime Vanguards Wiki helps Roblox players track codes, units, traits, evolutions, farming routes, update notes, and beginner progression for Kitawari's anime tower defense game.",
     "legalNotice": "Independent fan wiki. Not affiliated with Kitawari, Roblox, or official Anime Vanguards channels."
   },
-  "nav": {},
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "toggleTheme": "Toggle theme"
+  },
   "home": {
     "meta": {
       "title": "Anime Vanguards Wiki - Codes, Units & Guide",
