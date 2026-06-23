@@ -237,39 +237,67 @@ export interface NavGroup {
 
 // 分组标题映射：slug → 人类可读标题（默认英文）
 const GROUP_TITLES: Record<string, string> = {
-  bosses: "Bosses",
-  races: "Races",
-  maps: "Maps & Areas",
-  skills: "Skills",
   codes: "Codes",
-  guide: "Getting Started",
-  "tier-list": "Tier Lists",
+  tiers: "Tier Lists",
+  values: "Values",
+  units: "Units",
+  items: "Items",
+  modes: "Modes",
+  guide: "Guide",
+  community: "Community",
 };
 
 // 日文分组标题映射
 const GROUP_TITLES_JA: Record<string, string> = {
-  bosses: "ボス",
-  races: "種族",
-  maps: "マップ & エリア",
-  skills: "スキル",
   codes: "コード",
-  guide: "初心者ガイド",
-  "tier-list": "Tier List",
+  tiers: "ティアリスト",
+  values: "価値",
+  units: "ユニット",
+  items: "アイテム",
+  modes: "モード",
+  guide: "ガイド",
+  community: "コミュニティ",
+};
+
+const GROUP_TITLES_ES: Record<string, string> = {
+  codes: "Codigos",
+  tiers: "Tier Lists",
+  values: "Valores",
+  units: "Unidades",
+  items: "Objetos",
+  modes: "Modos",
+  guide: "Guia",
+  community: "Comunidad",
+};
+
+const GROUP_TITLES_PT_BR: Record<string, string> = {
+  codes: "Codigos",
+  tiers: "Tier Lists",
+  values: "Valores",
+  units: "Unidades",
+  items: "Itens",
+  modes: "Modos",
+  guide: "Guia",
+  community: "Comunidade",
 };
 
 // locale → 分组标题映射
 const GROUP_TITLES_BY_LOCALE: Record<string, Record<string, string>> = {
+  es: GROUP_TITLES_ES,
   ja: GROUP_TITLES_JA,
+  "pt-br": GROUP_TITLES_PT_BR,
 };
 
 // locale → "Overview" 翻译
 const OVERVIEW_LABEL_BY_LOCALE: Record<string, string> = {
+  es: "Resumen",
   ja: "一覧",
+  "pt-br": "Visao geral",
 };
 
 // 分组排序顺序
 const GROUP_ORDER: string[] = [
-  "guide", "races", "bosses", "maps", "skills", "codes", "tier-list",
+  "codes", "tiers", "values", "units", "items", "modes", "guide", "community",
 ];
 
 /**
@@ -353,7 +381,7 @@ export async function getAllContentPaths(language: Locale) {
   if (!fs.existsSync(localeDir)) return [];
 
   const entries = fs.readdirSync(localeDir, { withFileTypes: true });
-  const contentTypeDirs = entries.filter((entry) => entry.isDirectory());
+  const contentTypeDirs = entries.filter((entry) => entry.isDirectory() && CONTENT_TYPES.includes(entry.name));
 
   const paths = contentTypeDirs.flatMap((entry) => {
     const segments = getSlugsFromDirectory(path.join(localeDir, entry.name));

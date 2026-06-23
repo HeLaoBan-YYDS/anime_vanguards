@@ -7,9 +7,14 @@
     "legalNotice": "Independent fan wiki. Not affiliated with Kitawari, Roblox, or official Anime Vanguards channels."
   },
   "nav": {
-    "home": "Home",
-    "menu": "Menu",
-    "toggleTheme": "Toggle theme"
+    "codes": "Codes",
+    "tiers": "Tiers",
+    "values": "Values",
+    "units": "Units",
+    "items": "Items",
+    "modes": "Modes",
+    "guide": "Guide",
+    "community": "Community"
   },
   "home": {
     "meta": {
@@ -77,7 +82,7 @@
           "badge": "Beginner",
           "title": "Beginner Guide",
           "description": "Start Anime Vanguards with the core loop, first summons, upgrade priorities, and early resource choices.",
-          "href": "/beginner-guide"
+          "href": "/guide/anime-vanguards-beginner-guide"
         },
         {
           "badge": "Updated",
@@ -89,7 +94,7 @@
           "badge": "Updated",
           "title": "Tier List",
           "description": "Compare the best units for summons, evolutions, story clears, farming, and harder modes.",
-          "href": "/tier-list"
+          "href": "/tiers"
         },
         {
           "badge": "Popular",
@@ -101,31 +106,31 @@
           "badge": "New",
           "title": "Traits Guide",
           "description": "Review rare traits, reroll value, and the bonuses that matter most for stronger teams.",
-          "href": "/traits"
+          "href": "/items"
         },
         {
           "badge": "Popular",
           "title": "Gems Guide",
           "description": "Find practical Gem farming routes for summons, upgrades, and steady account progression.",
-          "href": "/gems-guide"
+          "href": "/values"
         },
         {
           "badge": "Popular",
           "title": "Evolution Guide",
           "description": "Track evolution materials, Gold costs, takedown requirements, and stronger unit forms.",
-          "href": "/evolution-guide"
+          "href": "/guide"
         },
         {
           "badge": "New",
           "title": "Update Notes",
           "description": "Follow major Anime Vanguards updates, new units, trailers, and mode changes.",
-          "href": "/updates"
+          "href": "/modes"
         },
         {
           "badge": "New",
           "title": "Farming Routes",
           "description": "Plan repeatable activities for Gems, rerolls, materials, and late-game account growth.",
-          "href": "/gems-guide"
+          "href": "/guide/anime-vanguards-how-to-level-up-fast"
         }
       ]
     },
@@ -204,7 +209,7 @@
           "order": 2,
           "name": "Anime Vanguards Tier List",
           "description": "Compare the best Anime Vanguards units and identify which characters are worth summoning, evolving, and upgrading. The rankings provide a quick overview of top-tier, reliable, situational, and low-priority units.",
-          "href": "/tier-list",
+          "href": "/tiers",
           "displayType": "tier-grid",
           "highlights": [
             {
@@ -229,7 +234,7 @@
           "order": 3,
           "name": "Anime Vanguards Beginner Guide",
           "description": "Follow a practical progression path for starting Anime Vanguards, earning gems, summoning units, and unlocking important upgrade systems. These steps help new players avoid wasting early resources.",
-          "href": "/beginner-guide",
+          "href": "/guide/anime-vanguards-beginner-guide",
           "displayType": "step-by-step",
           "highlights": [
             {
@@ -258,7 +263,7 @@
           "order": 4,
           "name": "Anime Vanguards Traits Guide",
           "description": "Learn how Anime Vanguards traits improve unit damage, attack speed, range, and overall performance. Compare rare traits and understand which bonuses are worth keeping before spending more Trait Rerolls.",
-          "href": "/traits",
+          "href": "/items",
           "displayType": "card-list",
           "highlights": [
             {
@@ -308,7 +313,7 @@
           "order": 6,
           "name": "Anime Vanguards Gems Guide",
           "description": "Learn the most useful ways to earn Gems for summons and account progression. Compare repeatable activities, daily rewards, and stage-based farming methods before deciding where to spend your playtime.",
-          "href": "/gems-guide",
+          "href": "/values",
           "displayType": "card-list",
           "highlights": [
             {
@@ -333,7 +338,7 @@
           "order": 7,
           "name": "Anime Vanguards Evolution Guide",
           "description": "Review the materials, currencies, and takedown requirements needed to evolve popular Anime Vanguards units. Evolution can unlock stronger forms, improved abilities, and significantly better late-game performance.",
-          "href": "/evolution-guide",
+          "href": "/guide",
           "displayType": "card-list",
           "highlights": [
             {
@@ -358,7 +363,7 @@
           "order": 8,
           "name": "Anime Vanguards Updates",
           "description": "Follow major Anime Vanguards updates, trailers, new units, game modes, and progression systems. This section provides a clear path to detailed update coverage based on official announcements and videos.",
-          "href": "/updates",
+          "href": "/modes",
           "displayType": "card-list",
           "highlights": [
             {
@@ -414,8 +419,41 @@
       "secondary": "Play on Roblox"
     }
   },
-  "bosses": {},
+  "codes": {
+    "overviewTitle": "Anime Vanguards Codes",
+    "overviewDescription": "Track Anime Vanguards code guides, redemption notes, reward explanations, and update-specific code coverage."
+  },
+  "tiers": {
+    "overviewTitle": "Anime Vanguards Tier Lists",
+    "overviewDescription": "Compare Anime Vanguards rankings for units, Memoria, meta picks, and update-specific progression priorities."
+  },
+  "values": {
+    "overviewTitle": "Anime Vanguards Values",
+    "overviewDescription": "Review trading values, calculators, pity planning, and value-list references for smarter Anime Vanguards decisions."
+  },
+  "units": {
+    "overviewTitle": "Anime Vanguards Units",
+    "overviewDescription": "Browse Anime Vanguards unit guides covering characters, evolutions, summon targets, and investment priorities."
+  },
+  "items": {
+    "overviewTitle": "Anime Vanguards Items",
+    "overviewDescription": "Find guides for Familiars, Memoria, Relics, potions, dice, and other items that shape Anime Vanguards builds."
+  },
+  "modes": {
+    "overviewTitle": "Anime Vanguards Modes",
+    "overviewDescription": "Explore Anime Vanguards mode guides for Odyssey, Elemental Towers, Godly Ascension, and event-specific challenges."
+  },
+  "guide": {
+    "overviewTitle": "Anime Vanguards Guide",
+    "overviewDescription": "Start with practical Anime Vanguards guides for beginners, evolutions, leveling, progression, and puzzle steps."
+  },
+  "community": {
+    "overviewTitle": "Anime Vanguards Community",
+    "overviewDescription": "Follow Anime Vanguards community resources, Discord coverage, and discussion around major game moments."
+  },
   "shared": {
+    "menu": "Menu",
+    "toggleTheme": "Toggle theme",
     "wikiNavigation": "Wiki Navigation",
     "activeCodes": "Active Codes",
     "updated": "Updated",
@@ -446,9 +484,10 @@
     "vvBuilder": "Official Website",
     "robloxGroup": "Kitawari Roblox Group",
     "beginnerGuide": "Beginner Guide",
-    "raceGuides": "Race Guides",
-    "bossGuides": "Boss Guides",
-    "buildGuide": "Build Guide",
+    "codesGuide": "Codes",
+    "tierLists": "Tier Lists",
+    "unitsGuide": "Units",
+    "valuesGuide": "Values",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
   }

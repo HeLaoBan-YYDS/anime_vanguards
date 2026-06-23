@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronRight, ExternalLink, Moon, Play, Sun, Menu } from "lucide-react";
+import { ChevronRight, ExternalLink, Menu, Play } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { NAVIGATION_CONFIG } from "@/config/navigation";
 import type { NavGroup } from "@/lib/content";
@@ -22,7 +22,8 @@ export function localizeHref(href: string, locale: string) {
 }
 
 export async function SiteHeader({ locale }: { locale: string }) {
-  const t = await getTranslations({ locale, namespace: "nav" });
+  const navT = await getTranslations({ locale, namespace: "nav" });
+  const sharedT = await getTranslations({ locale, namespace: "shared" });
   const header = (
     <div className="flex items-center justify-between gap-4">
       <Link href={localizeHref("/", locale)} className="flex items-center gap-3">
@@ -34,18 +35,18 @@ export async function SiteHeader({ locale }: { locale: string }) {
       <nav className="hidden items-center gap-1 md:flex">
         {NAVIGATION_CONFIG.map((item) => (
           <Link key={item.key} href={localizeHref(item.path, locale)} className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground">
-            {t(item.key)}
+            {navT(item.key)}
           </Link>
         ))}
       </nav>
       <div className="flex items-center gap-2">
         <LanguageSwitcher locale={locale} />
-        <ThemeToggle label={t("toggleTheme")} />
+        <ThemeToggle label={sharedT("toggleTheme")} />
         <Sheet>
-          <SheetTrigger asChild className="md:hidden"><Button variant="outline" size="icon" aria-label={t("menu")}><Menu className="h-4 w-4" /></Button></SheetTrigger>
+          <SheetTrigger asChild className="md:hidden"><Button variant="outline" size="icon" aria-label={sharedT("menu")}><Menu className="h-4 w-4" /></Button></SheetTrigger>
           <SheetContent className="border-border bg-background text-foreground">
             <div className="mt-8 grid gap-2">
-              {NAVIGATION_CONFIG.map((item) => <Link key={item.key} href={localizeHref(item.path, locale)} className="rounded-lg px-3 py-3 text-sm font-semibold hover:bg-muted">{t(item.key)}</Link>)}
+              {NAVIGATION_CONFIG.map((item) => <Link key={item.key} href={localizeHref(item.path, locale)} className="rounded-lg px-3 py-3 text-sm font-semibold hover:bg-muted">{navT(item.key)}</Link>)}
             </div>
           </SheetContent>
         </Sheet>
@@ -123,7 +124,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
             <p className="mt-3 max-w-xl text-sm leading-7 text-muted-foreground">{t("about")}</p>
           </div>
           <FooterList title={t("quickLinks")} links={[[t("playGame"), ROBLOX_GAME_URL], [t("officialDiscord"), DISCORD_URL], [t("officialYoutube"), YOUTUBE_CHANNEL_URL], [t("vvBuilder"), OFFICIAL_SITE_URL], [t("robloxGroup"), ROBLOX_GROUP_URL]]} />
-          <FooterList title={t("guides")} links={[[t("beginnerGuide"), "/guide"], [t("raceGuides"), "/races"], [t("bossGuides"), "/bosses"], [t("buildGuide"), "/tier-list"], [t("privacyPolicy"), "/privacy-policy"], [t("termsOfService"), "/terms-of-service"]]} />
+          <FooterList title={t("guides")} links={[[t("beginnerGuide"), "/guide"], [t("codesGuide"), "/codes"], [t("tierLists"), "/tiers"], [t("unitsGuide"), "/units"], [t("valuesGuide"), "/values"], [t("privacyPolicy"), "/privacy-policy"], [t("termsOfService"), "/terms-of-service"]]} />
         </div>
         <p className="mt-10 border-t border-border pt-6 text-xs text-muted-foreground">{t("copyright")}</p>
       </div>
