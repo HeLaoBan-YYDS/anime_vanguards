@@ -1,10 +1,10 @@
 {
   "site": {
-    "name": "VV: ULTIMATUM",
-    "shortName": "VV Ultimatum",
+    "name": "Anime Vanguards Wiki",
+    "shortName": "Anime Vanguards",
     "tagline": "Fan-Made Community Wiki",
-    "description": "Your complete companion for VV: ULTIMATUM on Roblox. Master all three races Shinigami, Quincy, and Hollow with in-depth guides, boss strategies, build optimization, and the latest codes.",
-    "legalNotice": "Non-official fan wiki. Made by players, for players."
+    "description": "Anime Vanguards Wiki helps Roblox players track codes, units, traits, evolutions, farming routes, update notes, and beginner progression for Kitawari's anime tower defense game.",
+    "legalNotice": "Independent fan wiki. Not affiliated with Kitawari, Roblox, or official Anime Vanguards channels."
   },
   "nav": {
     "races": "Races",
@@ -26,18 +26,18 @@
     },
     "hero": {
       "eyebrow": "Fan-Made Community Wiki",
-      "title": "VV: ULTIMATUM",
-      "description": "Your complete companion for VV: ULTIMATUM on Roblox. Master all three races Shinigami, Quincy, and Hollow with in-depth guides, boss strategies, build optimization, and the latest codes.",
+      "title": "Anime Vanguards Wiki",
+      "description": "Master Anime Vanguards on Roblox with practical routes for summons, units, traits, evolutions, farming, updates, and active code checks in one fast fan-made hub.",
       "stats": [
-        "Launched Jun 5",
-        "Updated Jun 11",
-        "3 Races",
-        "Lv100 Cap",
-        "130+ Skills"
+        "Released Sep 8 2024",
+        "Updated Jun 22 2026",
+        "1.94B+ Visits",
+        "1.95M+ Favorites",
+        "340K Peak CCU"
       ],
-      "primaryCta": "Start Beginner Guide",
-      "secondaryCta": "Compare Races",
-      "tertiaryCta": "Check Active Codes",
+      "primaryCta": "Play on Roblox",
+      "secondaryCta": "Join Official Discord",
+      "tertiaryCta": "Watch Official YouTube",
       "videoLabel": "Official media"
     },
     "updates": {
@@ -429,9 +429,9 @@
       ]
     },
     "finalCta": {
-      "title": "Ready to Master VV: ULTIMATUM?",
-      "description": "From your first steps in Fort Adams to endgame boss fights our community wiki has you covered with free, up-to-date guides.",
-      "primary": "Read the Beginner Guide",
+      "title": "Ready to Master Anime Vanguards?",
+      "description": "From your first Roblox summons to trait optimization and endgame clears, this fan wiki keeps the next smart step close at hand.",
+      "primary": "Browse Roblox Guides",
       "secondary": "Play on Roblox"
     }
   },
@@ -466,17 +466,18 @@
     "noGuidesAvailable": "No guides available yet. Check back soon!"
   },
   "footer": {
-    "aboutTitle": "VV Ultimatum Wiki",
-    "about": "VV Ultimatum Wiki is an independent fan-built guide hub covering progression routes, races, bosses, builds, and essential game knowledge for new and veteran players alike.",
+    "aboutTitle": "Anime Vanguards Wiki",
+    "about": "Anime Vanguards Wiki is an independent fan-built guide hub for Roblox players. It covers beginner progression, unit choices, traits, evolutions, farming, codes, and update explainers.",
     "quickLinks": "Quick Links",
     "guides": "Guides",
     "legal": "Legal",
-    "copyright": "2026 VV: ULTIMATUM Wiki. Not affiliated with Midnight Continent or Roblox.",
-    "description": "Free Bleach-inspired fighting RPG on Roblox. 3 races, 130+ skills, Lv100 cap.",
-    "playGame": "Play VV: ULTIMATUM",
+    "copyright": "2026 Anime Vanguards Wiki. Not affiliated with Kitawari or Roblox.",
+    "description": "Anime-inspired Roblox tower defense from Kitawari with summons, evolutions, traits, codes, and a massive live community.",
+    "playGame": "Play Anime Vanguards on Roblox",
     "officialDiscord": "Official Discord",
     "officialYoutube": "Official YouTube",
-    "vvBuilder": "VV Builder (Skill Planner)",
+    "vvBuilder": "Official Website",
+    "robloxGroup": "Kitawari Roblox Group",
     "beginnerGuide": "Beginner Guide",
     "raceGuides": "Race Guides",
     "bossGuides": "Boss Guides",
