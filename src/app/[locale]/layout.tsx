@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import { hasLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
@@ -54,6 +55,16 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 
   return (
     <html lang={locale} className={`${inter.variable}`} suppressHydrationWarning>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-GBF02C3ST1" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-GBF02C3ST1');
+        `}
+      </Script>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <NextIntlClientProvider messages={messages}>
