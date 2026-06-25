@@ -6,6 +6,7 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "next-themes";
+import { StickyTopAd } from "@/components/ads/sticky-top-ad";
 import { JsonLd, SiteFooter, SiteHeader } from "@/components/site";
 import { routing } from "@/i18n/routing";
 import en from "@/locales/en.json";
@@ -13,6 +14,7 @@ import en from "@/locales/en.json";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://anime-vanguards-wiki.wiki";
+const stickyTopAdKey = process.env.NEXT_PUBLIC_AD_MOBILE_320X50?.trim();
 
 type Messages = typeof en;
 
@@ -79,6 +81,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <NextIntlClientProvider messages={messages}>
             <JsonLd data={organization} />
             <SiteHeader locale={locale} />
+            <StickyTopAd adKey={stickyTopAdKey} />
             {children}
             <SiteFooter locale={locale} />
           </NextIntlClientProvider>

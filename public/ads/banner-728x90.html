@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=728,height=90,initial-scale=1" />
+    <style>
+      html,
+      body {
+        width: 728px;
+        height: 90px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const adsterraKey = "";
+      const adsterraWidth = 728;
+      const adsterraHeight = 90;
+
+      if (adsterraKey) {
+        var atOptions = {
+          key: adsterraKey,
+          format: "iframe",
+          height: adsterraHeight,
+          width: adsterraWidth,
+          params: {}
+        };
+
+        const invokeScript = document.createElement("script");
+        invokeScript.type = "text/javascript";
+        invokeScript.src =
+          "https://www.highperformanceformat.com/" + adsterraKey + "/invoke.js";
+        document.body.appendChild(invokeScript);
+      }
+    </script>
+  </body>
+</html>
