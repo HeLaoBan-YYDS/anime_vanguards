@@ -13,6 +13,10 @@ const adBannerTypes = {
     width: 320,
     height: 50,
   },
+  "banner-160x300": {
+    width: 160,
+    height: 300,
+  },
   "banner-160x600": {
     width: 160,
     height: 600,
@@ -135,6 +139,11 @@ export function AdBanner({
   const [dismissed, setDismissed] = useState(false);
   const key = adKey?.trim();
   const ad = adBannerTypes[type];
+  const closeAd = (event: React.SyntheticEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setDismissed(true);
+  };
 
   if (!key || dismissed) {
     return null;
@@ -164,10 +173,11 @@ export function AdBanner({
           <button
             type="button"
             aria-label="Close advertisement"
-            className="absolute bottom-0 right-0 grid size-7 place-items-center rounded-md bg-background/90 text-muted-foreground shadow-sm backdrop-blur transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            onClick={() => setDismissed(true)}
+            className="absolute right-1 top-1 z-50 grid size-5 cursor-pointer place-items-center rounded-sm bg-transparent text-foreground drop-shadow transition-colors hover:bg-background/50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            onClick={closeAd}
+            onPointerDown={closeAd}
           >
-            <X className="size-4" aria-hidden="true" />
+            <X className="size-3" aria-hidden="true" />
           </button>
         )}
       </div>
@@ -183,6 +193,11 @@ export function AdsterraBanner({
 }: AdsterraBannerProps) {
   const [dismissed, setDismissed] = useState(false);
   const ad = adsterraBannerPlacements[placement];
+  const closeAd = (event: React.SyntheticEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setDismissed(true);
+  };
 
   if (!ad.key.trim() || dismissed) {
     return null;
@@ -211,10 +226,11 @@ export function AdsterraBanner({
           <button
             type="button"
             aria-label="Close advertisement"
-            className="absolute bottom-0 right-0 grid size-7 place-items-center rounded-md bg-background/90 text-muted-foreground shadow-sm backdrop-blur transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            onClick={() => setDismissed(true)}
+            className="absolute right-1 top-1 z-50 grid size-5 cursor-pointer place-items-center rounded-sm bg-transparent text-foreground drop-shadow transition-colors hover:bg-background/50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            onClick={closeAd}
+            onPointerDown={closeAd}
           >
-            <X className="size-4" aria-hidden="true" />
+            <X className="size-3" aria-hidden="true" />
           </button>
         )}
       </div>

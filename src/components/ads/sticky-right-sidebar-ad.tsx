@@ -5,17 +5,17 @@ import { X } from "lucide-react";
 
 import { AdBanner } from "@/components/ads/adsterra-banner";
 
-type StickySidebarAdProps = {
+type StickyRightSidebarAdProps = {
   adKey?: string;
 };
 
-export function StickySidebarAd({ adKey }: StickySidebarAdProps) {
+export function StickyRightSidebarAd({ adKey }: StickyRightSidebarAdProps) {
   const [dismissed, setDismissed] = useState(false);
   const key = adKey?.trim();
   const closeAd = (event: React.SyntheticEvent<HTMLButtonElement>) => {
     event.preventDefault();
     event.stopPropagation();
-    event.currentTarget.closest<HTMLElement>("[data-left-sidebar-ad]")?.style.setProperty("display", "none");
+    event.currentTarget.closest<HTMLElement>("[data-right-sidebar-ad]")?.style.setProperty("display", "none");
     setDismissed(true);
   };
 
@@ -25,14 +25,12 @@ export function StickySidebarAd({ adKey }: StickySidebarAdProps) {
 
   return (
     <aside
-      data-left-sidebar-ad
-      className="pointer-events-none fixed left-4 top-0 z-30 hidden h-full w-[136px] lg:block 2xl:left-[max(1rem,_calc((100vw_-_80rem)_/_2_-_9.5rem))]"
+      data-right-sidebar-ad
+      className="pointer-events-none fixed right-0 top-0 z-30 hidden h-full w-40 lg:block"
     >
       <div className="sticky top-20 z-20 py-2">
-        <div className="pointer-events-auto relative h-[510px] w-[136px]">
-          <div className="origin-top-left scale-[0.85]">
-            <AdBanner type="banner-160x600" adKey={key} eager className="w-auto pointer-events-auto" />
-          </div>
+        <div className="pointer-events-auto relative w-fit">
+          <AdBanner type="banner-160x300" adKey={key} eager className="w-auto" />
           <button
             type="button"
             aria-label="Close advertisement"

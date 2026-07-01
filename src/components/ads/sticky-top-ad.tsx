@@ -11,6 +11,11 @@ type StickyTopAdProps = {
 
 export function StickyTopAd({ adKey }: StickyTopAdProps) {
   const [dismissed, setDismissed] = useState(false);
+  const closeAd = (event: React.SyntheticEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setDismissed(true);
+  };
 
   if (!adKey || dismissed) {
     return null;
@@ -24,10 +29,11 @@ export function StickyTopAd({ adKey }: StickyTopAdProps) {
           <button
             type="button"
             aria-label="关闭广告"
-            className="absolute right-1 top-1 z-10 grid size-6 place-items-center rounded-md bg-background/90 text-muted-foreground shadow-sm backdrop-blur transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            onClick={() => setDismissed(true)}
+            className="absolute right-1 top-1 z-50 grid size-5 cursor-pointer place-items-center rounded-sm bg-transparent text-foreground drop-shadow transition-colors hover:bg-background/50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            onClick={closeAd}
+            onPointerDown={closeAd}
           >
-            <X className="size-3.5" aria-hidden="true" />
+            <X className="size-3" aria-hidden="true" />
           </button>
         </div>
       </div>

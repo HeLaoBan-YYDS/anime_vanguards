@@ -6,6 +6,7 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "next-themes";
+import { StickyRightSidebarAd } from "@/components/ads/sticky-right-sidebar-ad";
 import { StickySidebarAd } from "@/components/ads/sticky-sidebar-ad";
 import { StickyTopAd } from "@/components/ads/sticky-top-ad";
 import { JsonLd, SiteFooter, SiteHeader } from "@/components/site";
@@ -17,6 +18,14 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://anime-vanguards-wiki.wiki";
 const stickyTopAdKey = process.env.NEXT_PUBLIC_AD_MOBILE_320X50?.trim();
 const stickySidebarAdKey = process.env.NEXT_PUBLIC_AD_SIDEBAR_160X600?.trim();
+const stickyRightSidebarAdKey = process.env.NEXT_PUBLIC_AD_SIDEBAR_160X300?.trim();
+const contentAdOffsetClassName =
+  [
+    stickySidebarAdKey ? "lg:pl-[152px] 2xl:pl-0" : "",
+    stickyRightSidebarAdKey ? "lg:pr-[176px] 2xl:pr-0" : "",
+  ]
+    .filter(Boolean)
+    .join(" ") || undefined;
 
 type Messages = typeof en;
 
@@ -85,7 +94,8 @@ export default async function LocaleLayout({ children, params }: { children: Rea
             <SiteHeader locale={locale} />
             <StickyTopAd adKey={stickyTopAdKey} />
             <StickySidebarAd adKey={stickySidebarAdKey} />
-            <div className={stickySidebarAdKey ? "lg:pl-[152px] 2xl:pl-0" : undefined}>
+            <StickyRightSidebarAd adKey={stickyRightSidebarAdKey} />
+            <div className={contentAdOffsetClassName}>
               {children}
               <SiteFooter locale={locale} />
             </div>
