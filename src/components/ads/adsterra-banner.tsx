@@ -6,7 +6,7 @@ import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 // Keep ad iframes from navigating the top-level page.
-const AD_IFRAME_SANDBOX = "allow-scripts allow-same-origin allow-popups";
+const AD_IFRAME_SANDBOX = "allow-scripts allow-popups";
 
 const adBannerTypes = {
   "banner-320x50": {
