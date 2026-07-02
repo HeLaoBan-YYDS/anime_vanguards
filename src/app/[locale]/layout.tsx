@@ -6,9 +6,7 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "next-themes";
-import { StickyRightSidebarAd } from "@/components/ads/sticky-right-sidebar-ad";
-import { StickySidebarAd } from "@/components/ads/sticky-sidebar-ad";
-import { StickyTopAd } from "@/components/ads/sticky-top-ad";
+import { StickyAd } from "@/components/ads/sticky-ad";
 import { JsonLd, SiteFooter, SiteHeader } from "@/components/site";
 import { routing } from "@/i18n/routing";
 import en from "@/locales/en.json";
@@ -92,9 +90,9 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <NextIntlClientProvider messages={messages}>
             <JsonLd data={organization} />
             <SiteHeader locale={locale} />
-            <StickyTopAd adKey={stickyTopAdKey} />
-            <StickySidebarAd adKey={stickySidebarAdKey} />
-            <StickyRightSidebarAd adKey={stickyRightSidebarAdKey} />
+            <StickyAd placement="top" type="banner-320x50" adKey={stickyTopAdKey} eager />
+            <StickyAd placement="left-sidebar" type="banner-160x600" adKey={stickySidebarAdKey} eager />
+            <StickyAd placement="right-sidebar" type="banner-160x300" adKey={stickyRightSidebarAdKey} eager />
             <div className={contentAdOffsetClassName}>
               {children}
               <SiteFooter locale={locale} />
