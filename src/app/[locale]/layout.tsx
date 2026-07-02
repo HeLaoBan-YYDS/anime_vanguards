@@ -46,6 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     metadataBase: new URL(siteUrl),
     title: { default: messages.home.meta.title, template: "%s" },
     description: siteDescription,
+    other: { "google-adsense-account": "ca-pub-9990396895505565" },
     openGraph: { type: "website", locale, url, siteName, title: siteName, description: siteDescription, images: [{ url: image, width: 1280, height: 720, alt: siteName }] },
     twitter: { card: "summary_large_image", title: siteName, description: siteDescription, images: [image] },
   };
@@ -66,6 +67,12 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 
   return (
     <html lang={locale} className={`${inter.variable}`} suppressHydrationWarning>
+      <Script
+        async
+        id="google-adsense"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9990396895505565"
+        crossOrigin="anonymous"
+      />
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-GBF02C3ST1" />
       <Script id="google-analytics">
         {`

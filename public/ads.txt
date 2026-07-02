@@ -1,2 +1,1 @@
-# Open-source placeholder.
-# Production advertising authorization files must be configured privately.
+google.com, pub-9990396895505565, DIRECT, f08c47fec0942fa0
