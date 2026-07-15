@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { JsonLd, WikiSidebar } from "@/components/site";
 import { getAllContent, getDynamicNavigation, type ContentItem, CONTENT_TYPES } from "@/lib/content";
 import { routing, type Locale } from "@/i18n/routing";
@@ -28,6 +28,7 @@ function languageAlternates(pathname: string) {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const messages = (await getMessages({ locale })) as Messages;
   const title = messages.home.meta.title;
   const description = messages.home.meta.description;
@@ -43,6 +44,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function LocaleHomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const loc = locale as Locale;
   const messages = (await getMessages({ locale })) as Messages;
   const navGroups = getDynamicNavigation(loc);

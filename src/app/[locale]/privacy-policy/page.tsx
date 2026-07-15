@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { LegalPage } from "@/components/legal-page";
 import { routing } from "@/i18n/routing";
 import en from "@/locales/en.json";
@@ -20,6 +20,7 @@ function languageAlternates(pathname: string) {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const messages = (await getMessages({ locale })) as Messages;
   const title = `${messages.legal.privacyPolicy.title} - ${messages.site.name}`;
   const description = messages.legal.privacyPolicy.description;
@@ -35,6 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function PrivacyPolicyPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const messages = (await getMessages({ locale })) as Messages;
   const { title, content } = messages.legal.privacyPolicy;
 
